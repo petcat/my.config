@@ -29,13 +29,22 @@ Shadowsocks-Python ：
 
 ShadowsocksR ：
 ```
-/etc/init.d/shadowsocks-r start | stop | restart | status
-/etc/init.d/shadowsocks-r start | stop | restart | status
-/etc/init.d/shadowsocks-r start | stop | restart | status
-/etc/init.d/shadowsocks-r start | stop | restart | status
-
+/etc/init.d/shadowsocks-r status
+/etc/init.d/shadowsocks-r start
+/etc/init.d/shadowsocks-r restart
+/etc/init.d/shadowsocks-r stop
+```
 Shadowsocks-Go ：
-/etc/init.d/shadowsocks-go start | stop | restart | status
-
+```
+/etc/init.d/shadowsocks-go status
+/etc/init.d/shadowsocks-go start
+/etc/init.d/shadowsocks-go restart
+/etc/init.d/shadowsocks-go stop
+```
 Shadowsocks-libev ：
-/etc/init.d/shadowsocks-libev start | stop | restart | status
+```
+/etc/init.d/shadowsocks-libev status
+/etc/init.d/shadowsocks-libev start
+/etc/init.d/shadowsocks-libev restart
+/etc/init.d/shadowsocks-libev stop
+```
