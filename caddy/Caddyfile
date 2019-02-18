@@ -4,7 +4,7 @@
     gzip
 }
 :666 {
-	  filebrowser  /  /data/www/down   {
-    database     /etc/filebrowser.db
+	filebrowser  /  /data/www/down   {
+        database     /etc/filebrowser.db
   	}
 }
