@@ -6,5 +6,6 @@
 :666 {
 	filebrowser  /  /data/www/down   {
         database     /etc/filebrowser.db
+	locale zh-cn
   	}
 }
