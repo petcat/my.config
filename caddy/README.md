@@ -6,3 +6,5 @@ caddy 安装
 
 caddy自启
 `caddy -service install -agree -email money@189.cn -conf /usr/local/bin/Caddyfile`
+
+`wget -O /usr/local/bin/Caddyfile https://raw.githubusercontent.com/petcat/my.config/master/caddy/Caddyfile`
