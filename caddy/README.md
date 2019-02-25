@@ -5,4 +5,4 @@ caddy 安装
 `curl https://getcaddy.com | bash -s personal hook.service,http.cache,http.filebrowser,http.git,tls.dns.cloudflare`
 
 caddy自启
-`caddy -service install -agree -email my@vpshost.cc -conf /usr/local/bin/Caddyfile`
+`caddy -service install -agree -email money@189.cn -conf /usr/local/bin/Caddyfile`
