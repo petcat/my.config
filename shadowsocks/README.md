@@ -55,7 +55,14 @@ BBR
 net.core.default_qdisc = fq
 net.ipv4.tcp_congestion_control = bbr
 ```
-2、sysctl -p
+
+OVZ 的 BBR
+
+`curl https://raw.githubusercontent.com/linhua55/lkl_study/master/get-rinetd.sh | bash`
+
+2、重置网络 `sysctl -p`
+
+3、验证： `lsmod | grep bbr`
 
 ```
 fs.file-max = 1000000
