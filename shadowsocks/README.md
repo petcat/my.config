@@ -9,10 +9,13 @@ wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.
 ### Config file:
 ```
 /etc/shadowsocks-python/config.json
+wget -O /etc/shadowsocks-python/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-python/config.json && /etc/init.d/shadowsocks-python restart
 
 /etc/shadowsocks-r/config.json
+wget -O /etc/shadowsocks-r/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-r/config.json && /etc/init.d/shadowsocks-r restart
 
 /etc/shadowsocks-go/config.json
+wget -O /etc/shadowsocks-go/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-go/config.json && /etc/init.d/shadowsocks-go restart
 
 /etc/shadowsocks-libev/config.json
 ```
