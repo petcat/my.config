@@ -94,7 +94,7 @@ alias sou='find / -name'
 alias finds='find / -name'
 alias deb='dpkg -i'
 #
-alias renginx='service nginx reload'
+alias renginx='/etc/init.d/nginx reload'
 alias ressh='service ssh restart'
 alias rephp5='systemctl restart php5.6-fpm'
 alias rephp='systemctl restart php7.1-fpm'
