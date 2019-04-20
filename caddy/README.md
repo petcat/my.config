@@ -12,4 +12,15 @@ caddy自启
 配置 Caddyfile
 `wget -O /usr/local/bin/Caddyfile https://raw.githubusercontent.com/petcat/my.config/master/caddy/Caddyfile`
 
+caddy + PHP
 
+```
+# PHP-FPM Configuration for Caddy
+     fastcgi / /run/php/php7.0-fpm.sock php {
+         ext .php
+         split .php
+         index index.php
+     }
+```
+
+`fastcgi / 127.0.0.1:9000 php`
