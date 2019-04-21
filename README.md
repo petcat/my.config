@@ -11,3 +11,6 @@ https://raw.githubusercontent.com/petcat/my.config/master/alpine.sh
 
 BBR：    
 `wget -O /etc/sysctl.conf --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/sysctl.conf && sysctl -p && lsmod | grep bbr`
+
+Welcome:
+`/etc/update-motd.d/10-help-text`
