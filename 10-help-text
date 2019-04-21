@@ -21,7 +21,7 @@
 #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 printf "\n"
-printf " * /etc/update-motd.d/10-help-text\n"
+printf "\n"
 printf " * Installed:	Caddy+Nginx1.10+PHP7.0+SQlite3.0\n"
 printf " * Date:	2019-04-21\n"
 printf " * Domain:	ariang.xyz+jpeg.men\n"
