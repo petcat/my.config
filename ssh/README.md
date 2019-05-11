@@ -10,4 +10,11 @@ sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_
 
 systemctl restart ssh
 ```
+sed -i 's/#AuthorizedKeysFile .ssh/authorized_keys/AuthorizedKeysFile .ssh/authorized_keys/' /etc/ssh/sshd_config
 sed -i 's/#AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2/AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2/' /etc/ssh/sshd_config
+
+```
+echo Port 10000 >> /etc/ssh/sshd_config
+echo PasswordAuthentication no >> /etc/ssh/sshd_config
+echo AuthorizedKeysFile  .ssh/authorized_keys .ssh/authorized_keys2 >> /etc/ssh/sshd_config
+```
