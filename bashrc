@@ -109,7 +109,7 @@ alias ressp='/etc/init.d/shadowsocks-python restart'
 alias ressg='/etc/init.d/shadowsocks-go restart'
 alias ressl='/etc/init.d/shadowsocks-libev restart'
 # Dwnload
-alias p2pbak='aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all -D'
+alias p2pbak='aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --rpc-secret=112121 -D'
 alias aira2c='aria2c'
 alias p2p='aria2c'
 alias ydl='youtube-dl -F'
