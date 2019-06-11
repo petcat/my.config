@@ -114,6 +114,7 @@ alias aira2c='aria2c'
 alias p2p='aria2c'
 alias ydl='youtube-dl -F'
 alias dl='youtube-dl -f'
+alias dl1080='youtube-dl -f 137+140'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
