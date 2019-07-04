@@ -14,9 +14,9 @@ server {
 	}
 }
 ```
-service nginx reload
-/etc/init.d/nginx restart
-systemctl reload nginx
-nginx -s reload
+service nginx reload   
+/etc/init.d/nginx restart    
+systemctl reload nginx    
+nginx -s reload    
 
 
