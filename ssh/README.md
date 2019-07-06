@@ -18,3 +18,5 @@ echo Port 10000 >> /etc/ssh/sshd_config
 echo PasswordAuthentication no >> /etc/ssh/sshd_config
 echo AuthorizedKeysFile  .ssh/authorized_keys .ssh/authorized_keys2 >> /etc/ssh/sshd_config
 ```
+
+`wget -O /root/.ssh/authorized_keys --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/ssh/new`
