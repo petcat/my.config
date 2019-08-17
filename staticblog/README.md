@@ -25,6 +25,7 @@ gem install bundler jekyll
 https://hexo.io/themes/ 
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
+source ~/.bashrc
 nvm install stable
 npm install hexo-cli -g
 ```
