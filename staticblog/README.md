@@ -22,6 +22,10 @@ gem install bundler jekyll
 生成 `jekyll build`
 
 ## Hexo
-https://hexo.io/themes/  
-
-`hexo init .`
+https://hexo.io/themes/ 
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
+nvm install stable
+npm install hexo-cli -g
+```
+网站：`hexo init .`
