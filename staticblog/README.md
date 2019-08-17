@@ -3,6 +3,10 @@ https://themes.gohugo.io/
 https://github.com/gohugoio/hugo/releases   
 https://github.com/gohugoio/hugo/releases/download/v0.57.1/hugo_0.57.1_Linux-64bit.deb  
 
+deb 
+hugo new site .
+hugo
+
 ## Jekyll
 https://jekyllthemes.io/free   
 https://jekyllthemes.dev/   
@@ -17,6 +21,9 @@ source ~/.bashrc
 apt install ruby-full build-essential zlib1g-dev
 gem install bundler jekyll
 ```
+生成 jekyll build
 
 ## Hexo
 https://hexo.io/themes/  
+
+hexo init .
