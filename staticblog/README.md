@@ -3,7 +3,7 @@ https://themes.gohugo.io/
 https://github.com/gohugoio/hugo/releases   
 https://github.com/gohugoio/hugo/releases/download/v0.57.1/hugo_0.57.1_Linux-64bit.deb  
 
-网站：`hugo new site .`  生成`hugo`
+新建：`hugo new site .`  生成`hugo`
 
 ## Jekyll
 https://jekyllthemes.io/free   
@@ -19,7 +19,7 @@ source ~/.bashrc
 apt install ruby-full build-essential zlib1g-dev
 gem install bundler jekyll
 ```
-生成 `jekyll build`
+下载主题，然后生成 `jekyll build` (jekyll b)
 
 ## Hexo
 https://hexo.io/themes/ 
@@ -29,4 +29,4 @@ source ~/.bashrc
 nvm install stable
 npm install hexo-cli -g
 ```
-网站：`hexo init .`
+新建：`hexo init .`  生成：`hexo generate` (hexo g)      
