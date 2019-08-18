@@ -100,6 +100,7 @@ alias deb='dpkg -i'
 alias get='setsid'
 alias nohup='nohup >/dev/null 2>&1'
 alias no='setsid'
+alias wget0='wget --no-check-certificate'
 #
 alias renginx='/etc/init.d/nginx reload'
 alias ressh='service ssh restart'
