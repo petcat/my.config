@@ -219,6 +219,14 @@ https://billing.vpshared.com/aff.php?aff=6188&pid=135
 > DDoS Protection   
 > [$6.00 Annually](https://portal.n3servers.com/cart.php?a=add&pid=238)   
 
+---
+## Dedicated IP Address Shared Hosting
 
+50G SSD + 无限流量无限域名独立IP + NY （$8）
+https://clients.solvedbydata.com/cart.php?a=add&pid=35
+150G SSD + 无限流量无限域名独立IP + NY （$15）
+https://clients.solvedbydata.com/cart.php?a=add&pid=36
+300G SSD + 无限流量无限域名独立IP + NY （$21）
+https://clients.solvedbydata.com/cart.php?a=add&pid=37
 
 
