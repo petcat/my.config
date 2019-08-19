@@ -46,7 +46,7 @@ If you like them, please give me likes or donate me.
 >  [$0.99 Annually](https://clients.kudohosting.com/cart.php?a=add&pid=112)
 
 
-3. MegazoneHosting.com     
+3. MegaZoneHosting.com     
 
 >  Host 2 Domains   
 >  10 GB SSD Storage Space    
@@ -119,7 +119,7 @@ If you like them, please give me likes or donate me.
 > DDoS Protection    
 > [$2.50 Annually](https://portal.n3servers.com/cart.php?a=add&pid=237)    
 
-3. Solvedbydata.com   
+3. SolvedbyData.com   
 
 > Host 2 Domains   
 > 20 GB SSD Space   
@@ -144,7 +144,8 @@ If you like them, please give me likes or donate me.
 > cPanel Control Panel   
 > CloudLinux Optimized   
 > LiteSpeed Web Server Powered    
-> [$3.99 Annually](https://clients.kayhosting.com/cart.php?a=add&pid=91)    
+> [$3.99 Annually](https://clients.kayhosting.com/cart.php?a=add&pid=91) 
+https://clients.kayhosting.com/aff.php?aff=497&pid=91
 
 2. vpshared.com
 
@@ -160,6 +161,7 @@ If you like them, please give me likes or donate me.
 > No Limit Domains   
 > No Limit E-mail Accounts   
 > [$4.00 Annually](https://billing.vpshared.com/cart.php?a=add&pid=135)
+https://billing.vpshared.com/aff.php?aff=6188&pid=135
 
 3. Hosting73.com
 
@@ -170,7 +172,7 @@ If you like them, please give me likes or donate me.
 > cPanel Control Panel   
 > [$5.00 Annually](https://www.hosting73.com/billing/cart.php?a=add&pid=106) 
 
-4. solvedbydata.com
+4. SolvedbyData.com
 
 > Host Unlimited Domains   
 > 100 GB SSD Space    
