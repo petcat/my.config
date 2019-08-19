@@ -144,7 +144,7 @@ If you like them, please give me likes or donate me.
 > cPanel Control Panel   
 > CloudLinux Optimized   
 > LiteSpeed Web Server Powered    
-> [$3.99 Annually](https://clients.kayhosting.com/cart.php?a=add&pid=91) 
+> [$3.99 Annually](https://clients.kayhosting.com/cart.php?a=add&pid=91)     
 https://clients.kayhosting.com/aff.php?aff=497&pid=91
 
 2. vpshared.com
@@ -160,7 +160,7 @@ https://clients.kayhosting.com/aff.php?aff=497&pid=91
 > No Limit FTP, SQL   
 > No Limit Domains   
 > No Limit E-mail Accounts   
-> [$4.00 Annually](https://billing.vpshared.com/cart.php?a=add&pid=135)
+> [$4.00 Annually](https://billing.vpshared.com/cart.php?a=add&pid=135)    
 https://billing.vpshared.com/aff.php?aff=6188&pid=135
 
 3. Hosting73.com
