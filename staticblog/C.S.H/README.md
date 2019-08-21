@@ -131,6 +131,17 @@ If you like them, please give me likes or donate me.
 > New York Datacenter   
 > [$3.00 Annually](https://clients.solvedbydata.com/cart.php?a=add&pid=12)    
 
+4. ArkaHosting.com
+
+15GB SSD Storage   
+500GB Monthly Bandwidth   
+3 Domains Hosted   
+Unlimited Email Accounts   
+cPanel Control Panel  
+Softaculous Script Installer  
+LiteSpeed Optimization  
+[$3.79 Annually](https://core.arkahosting.com/cart.php?a=add&pid=27)   
+
 ---
 
 ## $2 ~ $9 Annually Unlimited site Hosting
