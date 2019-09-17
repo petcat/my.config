@@ -3,9 +3,10 @@
     "local_address":"127.0.0.1",
     "local_port":1080,
     "port_password":{
-         "3389":"ss@passwd.3389",
-         "5900":"ss@passwd.5900",
-         "8080":"ss@passwd.8080"
+         "3389":"ss@passwd.3389.",
+         "5900":"ss@passwd.5900.",
+         "22":"ss@passwd.22.",
+         "8080":"ss@passwd.8080."
     },
     "timeout":300,
     "method":"aes-256-gcm",
