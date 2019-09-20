@@ -11,5 +11,5 @@
 #
 # By default this script does nothing.
 
-aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --dir=/data/www/down -D
+aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --rpc-secret=112121 --dir=/data/www/down -D
 exit 0
