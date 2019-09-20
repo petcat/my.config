@@ -18,7 +18,9 @@
 
 ## 开机启动（systemd）：   
 
-`wget https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service -o /lib/systemd/system/filebrowser.service`   
+`wget -O /lib/systemd/system/filebrowser.service https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service`   
+
+`wget -O /lib/systemd/system/filebrowser.service https://git.io/Je3Q7`   
 
 开机启动：`systemctl enable filebrowser.service`   
 
