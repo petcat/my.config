@@ -28,7 +28,11 @@
 
 取消开机启动：`systemctl disable filebrowser.service` 
 
----
+## 开机启动 (/etc/rc.local):
+
+setsid /usr/local/bin/filebrowser -d /etc/filebrowser.db &   
+
+## 命令
 
 运行：`systemctl start filebrowser.service`   
 
