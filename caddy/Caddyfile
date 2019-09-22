@@ -7,9 +7,3 @@
 :666  {
         proxy  /  127.0.0.1:8080
 }
-
-:666  {
-	filebrowser  /  /data/www/down  {
-        database  /etc/filebrowser.db
-	}
-}
