@@ -3,7 +3,7 @@
 https://raw.githubusercontent.com/petcat/my.config/master/.bashrc
 https://raw.githubusercontent.com/petcat/my.config/master/alpine.sh
 
-`wget -O .bashrc --no-check-certificate https://git.io/fh5Ze && source ~/.bashrc`  
+`wget -O .bashrc --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/bashrc && source ~/.bashrc`  
 
 `wget -O /etc/profile --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/bashrc && source /etc/profile`    
 
