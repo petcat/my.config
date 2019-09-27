@@ -1,7 +1,6 @@
 ## Hugo
 https://themes.gohugo.io/   
 https://github.com/gohugoio/hugo/releases   
-https://github.com/gohugoio/hugo/releases/download/v0.57.1/hugo_0.57.1_Linux-64bit.deb  
 
 新建：`hugo new site .`  生成`hugo`
 
@@ -22,7 +21,8 @@ gem install bundler jekyll
 下载主题，然后生成 `jekyll build` (jekyll b)
 
 ## Hexo
-https://hexo.io/themes/ 
+https://hexo.io/themes/  
+https://github.com/nvm-sh/nvm/releases  
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | sh
 source ~/.bashrc
