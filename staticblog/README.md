@@ -9,6 +9,7 @@ https://jekyllthemes.io/free
 https://jekyllthemes.dev/   
 http://jekyllthemes.org/  
 
+安装：  
 ```
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
@@ -18,6 +19,7 @@ source ~/.bashrc
 apt install ruby-full build-essential zlib1g-dev
 gem install bundler jekyll
 ```
+升级：`bundle update` 或 `gem update jekyll`
 下载主题，然后生成 `jekyll build` (jekyll b)
 
 ## Hexo
