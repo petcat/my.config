@@ -1,6 +1,6 @@
 ```
 Port 10000      
-AuthorizedKeysFile      .ssh/authorized_keys .ssh/authorized_keys2      
+AuthorizedKeysFile      %h/.ssh/authorized_keys  %h/.ssh/authorized_keys2      
 PasswordAuthentication no  
 ```
 
