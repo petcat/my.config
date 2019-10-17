@@ -9,6 +9,8 @@ Tools
 
 RAR  
 ```
-wget http://rarlab.com/rar/rarlinux-x64-5.5.0.tar.gz && tar xzf rarlinux*.tar.gz && cd rar && make && cd .. && mv rarlinux*.tar.gz rar /tmp   
-wget http://rarlab.com/rar/rarlinux-5.5.0.tar.gz && tar xzf rarlinux*.tar.gz && cd rar && make && cd .. && mv rarlinux*.tar.gz rar /tmp
+# 64
+wget https://rarlab.com/rar/rarlinux-x64-5.7.1.tar.gz && tar xzf rarlinux*.tar.gz && cd rar && make && cd .. && mv rar* /tmp 
+# 86
+wget https://rarlab.com/rar/rarlinux-5.7.1.tar.gz && tar xzf rarlinux*.tar.gz && cd rar && make && cd .. && mv rar* /tmp
 ```
