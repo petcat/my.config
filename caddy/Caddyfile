@@ -1,5 +1,5 @@
 :88  {
-	root  /data/www/down
+	root  /www/down
 	browse
 	gzip
 }
