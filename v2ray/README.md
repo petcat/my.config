@@ -1,6 +1,8 @@
 ## 安装
 
-`bash <(curl -L -s https://install.direct/go.sh)`
+`bash <(curl -L -s https://install.direct/go.sh)`   
+
+`wget -O /etc/v2ray/config.json https://raw.githubusercontent.com/petcat/my.config/master/v2ray/config.json`   
 
 ```
 {
