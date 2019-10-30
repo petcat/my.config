@@ -35,8 +35,8 @@ rvm install ruby
 gem install bundler jekyll
 ```
 
-升级：`bundle update` 或 `gem update jekyll`
-下载主题，然后生成 `jekyll build` (jekyll b)
+升级：`bundle update` 或 `gem update jekyll`    
+下载主题，然后生成 `jekyll build` (jekyll b)   
 
 ## Hexo
 https://hexo.io/themes/  
