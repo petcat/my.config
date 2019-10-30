@@ -21,9 +21,9 @@ gem install bundler jekyll
 ```
 提示版本过低，低于2.4，https://github.com/rvm/ubuntu_rvm
 
-> ERROR:  Error installing jekyll:
->	jekyll-sass-converter requires Ruby version >= 2.4.0.
-> 1 gem installed
+> ERROR:  Error installing jekyll:   
+>	jekyll-sass-converter requires Ruby version >= 2.4.0.    
+> 1 gem installed    
 
 
 ```
