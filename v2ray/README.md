@@ -44,8 +44,9 @@
 ```
 
 ```
-mydomain.xyz {
-    proxy /go  localhost:10000 {
+my.xyz {
+    tls    z@163.com
+    proxy /  127.0.0.1:12345  {
     websocket
     header_upstream -Origin
   }
