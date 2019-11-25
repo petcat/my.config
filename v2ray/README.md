@@ -6,9 +6,10 @@
 
 `service v2ray restart` `service v2ray status`
 
-> 12345   7c3b0050-df4a-4ea4-a9a2-9e4959c4c654    
+> 12345   7c3b0050-df4a-4ea4-a9a2-9e4959c4c654      
 
 `wget -O /etc/nginx/conf.d/v2ray.conf --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/v2ray/nginx.conf`
+
 ---
 
 ```
