@@ -5,6 +5,12 @@
 `wget -O /etc/v2ray/config.json https://raw.githubusercontent.com/petcat/my.config/master/v2ray/config.json`   
 
 ```
+12345   
+7c3b0050-df4a-4ea4-a9a2-9e4959c4c654    
+```
+---
+
+```
 {
   "inbounds": [
     {
