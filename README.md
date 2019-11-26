@@ -14,3 +14,5 @@ BBR：
 
 Welcome:
 `/etc/update-motd.d/10-help-text`
+
+`wget -O /etc/aria2/aria2.conf --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/aria2.conf`
