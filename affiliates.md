@@ -13,6 +13,8 @@ https://www.hostens.com/?affid=760
 
 https://ion.krypt.com/aff.php?aff=624
 
+https://my.frantech.ca/aff.php?aff=1004
+
 https://billing.virmach.com/aff.php?aff=6188   
 https://billing.vpsgamers.com/aff.php?aff=6188   
 https://billing.vpscraft.com/aff.php?aff=6188   
