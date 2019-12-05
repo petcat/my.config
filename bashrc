@@ -103,6 +103,7 @@ alias wget0='wget --no-check-certificate'
 # Web Server
 alias nginxdir='cd /etc/nginx/conf.d'
 alias renginx='/etc/init.d/nginx reload'
+alias inginx='/etc/init.d/nginx status'
 alias ressh='service ssh restart'
 alias rephp5='systemctl restart php5.6-fpm'
 alias rephp='systemctl restart php7.2-fpm'
