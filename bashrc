@@ -78,6 +78,7 @@ fi
 alias ll='ls -halF'
 alias la='ls -A'
 alias l='ls -CF'
+alias grep="grep --color=auto"
 alias aliass='source ~/.bashrc'
 alias pk='pkill -9'
 alias update='apt update'
@@ -100,6 +101,7 @@ alias get='setsid'
 alias nohup='nohup >/dev/null 2>&1'
 alias no='setsid'
 alias wget0='wget --no-check-certificate'
+alias -s zip='unzip'
 # Web Server
 alias nginxdir='cd /etc/nginx/conf.d'
 alias renginx='/etc/init.d/nginx reload'
@@ -140,6 +142,10 @@ alias dl1080='youtube-dl -f 137+140'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Add this to .bashrc or its equivalent
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
