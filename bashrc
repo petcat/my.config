@@ -101,7 +101,6 @@ alias get='setsid'
 alias nohup='nohup >/dev/null 2>&1'
 alias no='setsid'
 alias wget0='wget --no-check-certificate'
-alias -s zip='unzip'
 # Web Server
 alias nginxdir='cd /etc/nginx/conf.d'
 alias renginx='/etc/init.d/nginx reload'
