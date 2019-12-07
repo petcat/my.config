@@ -126,7 +126,7 @@ alias ressg='/etc/init.d/shadowsocks-go restart'
 alias ressl='/etc/init.d/shadowsocks-libev restart'
 # Transfer
 alias zhuan='curl --upload-file'
-alias zhuan='curl --upload-file'
+alias transfer='curl --upload-file'
 # Dwnload
 alias p2pbak='aria2c --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all --rpc-secret=112121 -D'
 alias aira2c='aria2c'
