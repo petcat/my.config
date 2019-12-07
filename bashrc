@@ -78,7 +78,6 @@ fi
 alias ll='ls -halF'
 alias la='ls -A'
 alias l='ls -CF'
-alias grep="grep --color=auto"
 alias aliass='source ~/.bashrc'
 alias pk='pkill -9'
 alias update='apt update'
