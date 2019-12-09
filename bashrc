@@ -147,6 +147,9 @@ alias dl1080='youtube-dl -f 137+140'
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+# Add Transfer
+transfer() { if [ $# -eq 0 ]; then echo -e "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi
+tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; }
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
@@ -156,51 +159,3 @@ fi
 #fi
 PS1='${debian_chroot:+($debian_chroot)}\[\e[1;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 export PROMPT_COMMAND='{ msg=$(history 1 | { read x y; echo $y; });user=$(whoami); echo $(date "+%Y-%m-%d %H:%M:%S"):$user:`pwd`/:$msg ---- $(who am i); } >> /tmp/`hostname`.`whoami`.history-timestamp'
-
-transfer() { 
-    # check arguments
-    if [ $# -ne 1 ]; 
-    then 
-        echo -e "Wrong arguments specified. Usage:\ntransfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"
-        return 1
-    fi
-
-    # get temporary filename, output is written to this file so show progress can be showed
-    tmpfile="$( mktemp -t transferXXX )"
-    
-    # upload stdin or file
-    file="$1"
-
-    if tty -s; 
-    then 
-        basefile="$( basename "$file" | sed -e 's/[^a-zA-Z0-9._-]/-/g' )"
-
-        if [ ! -e $file ];
-        then
-            echo "File $file doesn't exists."
-            return 1
-        fi
-        
-        if [ -d $file ];
-        then
-            # zip directory and transfer
-            zipfile="$( mktemp -t transferXXX.zip )"
-            cd "$(dirname "$file")" && zip -r -q - "$(basename "$file")" >> "$zipfile"
-            curl --progress-bar --upload-file "$zipfile" "https://transfer.sh/$basefile.zip" >> "$tmpfile"
-            rm -f $zipfile
-        else
-            # transfer file
-            curl --progress-bar --upload-file "$file" "https://transfer.sh/$basefile" >> "$tmpfile"
-        fi
-    else 
-        # transfer pipe
-        curl --progress-bar --upload-file "-" "https://transfer.sh/$file" >> "$tmpfile"
-    fi
-   
-    # cat output link
-    cat "$tmpfile"
-    echo
-
-    # cleanup
-    rm -f "$tmpfile"
-}
