@@ -38,7 +38,7 @@ class DirectoryListing {
 	// If you've enabled the includeUrl parameter above, enter the full url to the directory the index.php file
 	// is located in here, followed by a forward slash.
 	// 填写脚本所在的对应网址
-	public $directoryUrl = 'http://yoursite.com/main-directory-name-here/';
+	public $directoryUrl = 'http://yoursite.com/';
 
 	// Set to true to list all sub-directories and allow them to be browsed
 	public $showSubDirectories = true;
