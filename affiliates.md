@@ -15,7 +15,7 @@ https://hosthatch.com/a?id=1336
 
 https://www.hostens.com/?affid=760
 
-https://ion.krypt.com/aff.php?aff=624
+https://ion.krypt.com/aff.php?aff=572
 
 https://my.frantech.ca/aff.php?aff=1004
 
