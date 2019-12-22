@@ -1,6 +1,7 @@
 ## Hugo
 https://themes.gohugo.io/   
 https://github.com/gohugoio/hugo/releases   
+https://github.com/gohugoio/hugo/releases/download/v0.61.0/hugo_0.61.0_Linux-64bit.deb   
 
 新建：`hugo new site .`  生成`hugo`
 
