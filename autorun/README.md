@@ -6,10 +6,10 @@ wget --no-check-certificate -O /etc/rc.local https://raw.githubusercontent.com/p
 ```
 
 
-chmod +x /etc/rc.local  
-systemctl enable rc-local  
+chmod +x /etc/rc.local     
+systemctl enable rc-local     
 
 
-启动服务并检查状态
+启动服务并检查状态    
 systemctl start rc-local.service  
 systemctl status rc-local.service  
