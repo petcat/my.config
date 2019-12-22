@@ -1,9 +1,9 @@
 
-```
-wget --no-check-certificate -O /etc/systemd/system/rc-local.service https://raw.githubusercontent.com/petcat/my.config/master/autorun/rc-local.service
 
-wget --no-check-certificate -O /etc/rc.local https://raw.githubusercontent.com/petcat/my.config/master/autorun/rc.local
-```
+> wget --no-check-certificate -O /etc/systemd/system/rc-local.service https://raw.githubusercontent.com/petcat/my.config/master/autorun/rc-local.service
+
+> wget --no-check-certificate -O /etc/rc.local https://raw.githubusercontent.com/petcat/my.config/master/autorun/rc.local
+
 
 
 chmod +x /etc/rc.local     
