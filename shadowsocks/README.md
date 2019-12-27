@@ -62,8 +62,11 @@ net.ipv4.tcp_congestion_control = bbr
 OVZ 的 BBR
 
 `curl https://raw.githubusercontent.com/linhua55/lkl_study/master/get-rinetd.sh | bash`     
+/etc/rinetd-bbr.conf    
 systemctl status rinetd-bbr.service    
 systemctl restart rinetd-bbr.service   
+
+https://github.com/tcp-nanqinlang/wiki/wiki/lkl-rinetd    
 
 2、重置网络 `sysctl -p`
 
