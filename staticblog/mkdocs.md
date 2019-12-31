@@ -16,7 +16,8 @@ pip3 install mkdocs
 ```
 
 升级
-`pip3 install -U pip`
+`pip3 install -U pip`  
+`pip3 install -U mkdocs`  
 
 主题  
 多种配色主题， demo: https://mkdocs.github.io/mkdocs-bootswatch/
