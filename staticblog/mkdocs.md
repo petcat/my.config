@@ -10,7 +10,11 @@ pip install mkdocs
 
 ## python3.x
 ```
-python3 -V  
+#查看版本
+python3 -V 
+#如没有则安装
+apt install python3
+# 安装 pip
 apt install python3-venv python3-pip  
 pip3 install mkdocs   
 ```
