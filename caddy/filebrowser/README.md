@@ -28,7 +28,7 @@
 
 开机启动：`systemctl enable filebrowser.service`   
 
-修改：`nano /lib/systemd/system/filebrowser.service`  
+修改：`nano /etc/systemd/system/filebrowser.service`  
 
 修改完成后：`systemctl daemon-reload`   
 
