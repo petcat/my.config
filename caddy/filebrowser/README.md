@@ -18,8 +18,9 @@
 
 ## 开机启动（systemd）：   
 
-> /etc/systemd/system 用于本地安装   /lib/systemd/system/ 用于包安装   
-~~wget -O /lib/systemd/system/filebrowser.service https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service~~   
+> /etc/systemd/system 用于本地安装      
+> /lib/systemd/system/ 用于包安装     
+> ~~wget -O /lib/systemd/system/filebrowser.service https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service~~   
 
 `wget -O /etc/systemd/system/filebrowser.service https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service`
 
