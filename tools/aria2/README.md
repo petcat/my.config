@@ -7,6 +7,8 @@ mkdir -p /etc/aria2 && touch /etc/aria2/aria2.session
 `wget -O /etc/systemd/system/aria2c.service --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/tools/aria2/aria2c.service`
 
 命令：   
+开机启动：systemctl enable aria2c.service  
+
 运行：systemctl start aria2c.service    
 
 停止：systemctl stop aria2c.service    
