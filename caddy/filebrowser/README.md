@@ -18,12 +18,12 @@
 
 ## 开机启动（systemd）：   
 
-> /etc/systemd/system 本地 /lib/systemd/system/ 包安装
+> /etc/systemd/system 用于本地安装   /lib/systemd/system/ 用于包安装   
 ~~wget -O /lib/systemd/system/filebrowser.service https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service~~   
 
 `wget -O /etc/systemd/system/filebrowser.service https://raw.githubusercontent.com/petcat/my.config/master/caddy/filebrowser/filebrowser.service`
 
-`wget -O /lib/systemd/system/filebrowser.service https://git.io/Je3Q7`   
+`wget -O /etc/systemd/system/filebrowser.service https://git.io/Je3Q7`   
 
 开机启动：`systemctl enable filebrowser.service`   
 
