@@ -13,4 +13,6 @@ mkdir -p /etc/aria2 && touch /etc/aria2/aria2.session
 
 停止：systemctl stop aria2c.service    
 
-查看运行状态：systemctl status aria2c.service   
+查看运行状态：systemctl status aria2c.service      
+
+取消开机启动：systemctl disable aria2c.service    
