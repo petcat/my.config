@@ -31,6 +31,7 @@ https://billing.vpsgamers.com/aff.php?aff=6188
 https://billing.vpscraft.com/aff.php?aff=6188   
 https://billing.vpshared.com/aff.php?aff=6188   
 https://billing.virmach.com/aff.php?aff=6188&url=virmach.com/special-offers   
+https://billing.virmach.com/aff.php?aff=628    
 
 # ChunkHost $50 消费$50
 https://chunkhost.com/r/vps-hosting   
