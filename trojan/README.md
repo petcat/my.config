@@ -8,13 +8,14 @@ systemctl start trojan
 
 nano /usr/local/etc/trojan/config.json
 
+```
 z.xyz  {
   tls  lighttpd@hotmail.com
   proxy  https://www.ietf.org
 }
+```
 
-
-
+```
 server {
     listen 127.0.0.1:80 default_server;
 
@@ -42,3 +43,4 @@ server {
 
     return 301 https://$host$request_uri;
 }
+```
