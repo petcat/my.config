@@ -11,7 +11,7 @@ nano /usr/local/etc/trojan/config.json
 ```
 z.xyz  {
   tls  lighttpd@hotmail.com
-  proxy  https://www.ietf.org
+  proxy  /  https://www.ietf.org
 }
 ```
 
