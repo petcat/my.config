@@ -41,6 +41,7 @@ https://chunkhost.com/r/bonus
 
 域名  
 https://www.name.com/zh-cn/referral/9d09  
+https://affiliate.namecheap.com/?affId=9727  
 
 飞机   
 https://go.qianglie.cc/aff.php?aff=479
