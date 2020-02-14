@@ -1,0 +1,7 @@
+https://www.hostloc.com/thread-644273-1-1.html   
+
+netsh int tcp show global    
+ 
+netsh int tcp set global timestamps=enabled   
+
+netsh int tcp set supplemental template=internet congestionprovider=ctcp   
