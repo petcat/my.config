@@ -40,9 +40,9 @@ setsid /usr/local/bin/filebrowser -d /etc/filebrowser.db &
 
 ## 命令
 
-运行：`systemctl start filebrowser.service`   
+运行：`systemctl start filebrowser`   
 
-停止：`systemctl stop filebrowser.service`     
+停止：`systemctl stop filebrowser`     
 
-查看运行状态：`systemctl status filebrowser.service`   
+查看运行状态：`systemctl status filebrowser`   
 
