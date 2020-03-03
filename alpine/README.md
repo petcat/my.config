@@ -7,6 +7,6 @@ chmod + x digitalocean-alpine.sh
 
 
 
-wget https://raw.githubusercontent.com/petcat/my.config/master/alpine.sh   
-bash alpine.sh
-sh alpine.sh
+wget https://raw.githubusercontent.com/petcat/my.config/master/alpine.sh     
+bash alpine.sh    
+sh alpine.sh    
