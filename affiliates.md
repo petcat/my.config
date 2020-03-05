@@ -8,7 +8,8 @@ https://bandwagonhost.com/aff.php?aff=697
 
 https://www.onevps.com/portal/aff.php?aff=6385     
 
-https://secure.sharktech.net/helpdesk/aff.php?aff=709     
+https://secure.sharktech.net/helpdesk/aff.php?aff=709   
+https://www.changeip.com/accounts/aff.php?aff=3388   
 
 https://pacificrack.com/portal/aff.php?aff=39    
 
