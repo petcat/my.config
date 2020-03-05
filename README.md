@@ -5,7 +5,6 @@ https://raw.githubusercontent.com/petcat/my.config/master/alpine.sh
 
 `wget -O .bashrc --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/bashrc && source ~/.bashrc`  
 
-`wget -O /etc/profile --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/bashrc && source /etc/profile`    
 
 `wget -O alpine.sh --no-check-certificate https://git.io/fhNiF && bash alpine.sh`
 
@@ -19,3 +18,6 @@ Welcome:
 
 ### phpmyadmin
 `wget -O libraries/config.default.php --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/phpmyadmin.php`
+
+### open一键
+`wget https://git.io/v1jlQ -O openvpn-install.sh && bash openvpn-install.sh`
