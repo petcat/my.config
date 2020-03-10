@@ -23,9 +23,9 @@ https://my.frantech.ca/aff.php?aff=1004
 
 https://billing.dacentec.com/hostbill/?affid=426   
 
-https://clients.hostsailor.com/aff.php?aff=880  
-https://clients.hostsailor.com/aff.php?aff=880&pid=447     
-https://clients.hostsailor.com/aff.php?aff=880&gid=37    
+https://clients.hostsailor.com/aff.php?aff=768  
+https://clients.hostsailor.com/aff.php?aff=768&pid=447     
+https://clients.hostsailor.com/aff.php?aff=768&gid=37    
 
 https://billing.virmach.com/aff.php?aff=6188   
 https://billing.vpsgamers.com/aff.php?aff=6188   
