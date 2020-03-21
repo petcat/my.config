@@ -1,0 +1,13 @@
+abc.com:88 { 
+  #root /srv     #root用于指定运行位置
+  gzip 
+  basicauth / root passwd  #开启密码,路径，账号,密码
+  webdav / {
+    scope       /srv #不能指定硬盘根目录，会报错。
+    modify      true #是否可以写入，ture为可以写入，false为不可写入
+    allow       path
+    allow_r     regex
+    block       path
+    block_r     regex
+    }
+}
