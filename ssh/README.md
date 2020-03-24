@@ -10,9 +10,11 @@ mkdir -p /root/.ssh && chmod 600 /root/.ssh && wget -O /root/.ssh/authorized_key
 ```
 ```
 # 创建
-mkdir /root/.ssh && chmod 600 /root/.ssh && touch /root/.ssh/authorized_keys && chmod 700 /root/.ssh/authorized_keys  
+mkdir .ssh && chmod 600 .ssh && touch .ssh/authorized_keys && chmod 700 .ssh/authorized_keys  
 # 下载 --no-check-certificate
-wget -O /root/.ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/new
+wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/25519
+wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/default
+wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/new
 ```
 
 ### 其他
