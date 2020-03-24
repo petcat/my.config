@@ -5,16 +5,19 @@ AuthorizedKeysFile      %h/.ssh/authorized_keys  %h/.ssh/authorized_keys2
 PasswordAuthentication no  
 ```
 ## authorized_keys
-```
-mkdir -p /root/.ssh && chmod 600 /root/.ssh && wget -O /root/.ssh/authorized_keys --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/ssh/25519 && chmod 700 /root/.ssh/authorized_keys
-```
+
 ```
 # 创建
 mkdir .ssh && chmod 600 .ssh && touch .ssh/authorized_keys && chmod 700 .ssh/authorized_keys  
+chmod 600 .ssh && touch .ssh/authorized_keys2 && chmod 700 .ssh/authorized_keys 
 # 下载 --no-check-certificate
 wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/25519
 wget -O .ssh/authorized_keys2 https://raw.githubusercontent.com/petcat/my.config/master/ssh/default
 wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/new
+```
+
+```
+mkdir -p /root/.ssh && chmod 600 /root/.ssh && wget -O /root/.ssh/authorized_keys --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/ssh/25519 && chmod 700 /root/.ssh/authorized_keys
 ```
 
 ### 其他
