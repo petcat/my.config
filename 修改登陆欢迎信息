@@ -1,0 +1,7 @@
+目录：/etc/update-motd.d/
+
+修改 00-header 或 10-help-text （数字代表显示次序）
+
+增加 cat /root/README
+
+生效命令：`run-parts /etc/update-motd.d/`
