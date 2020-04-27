@@ -24,6 +24,7 @@ https://ion.krypt.com/aff.php?aff=572
 https://my.frantech.ca/aff.php?aff=1004  
 
 https://billing.dacentec.com/hostbill/?affid=426   
+https://portal.drserver.net/?affid=226   
 
 https://clients.hostsailor.com/aff.php?aff=768  
 https://clients.hostsailor.com/aff.php?aff=768&pid=447     
