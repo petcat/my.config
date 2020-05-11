@@ -10,7 +10,11 @@ systemctl enable trojan
 systemctl status trojan   
 systemctl start trojan   
 
-nano /usr/local/etc/trojan/config.json
+nano /usr/local/etc/trojan/config.json  修改 password 证书
+```
+/root/.caddy/acme/acme-v02.api.letsencrypt.org/sites/123.com/123.com.crt
+/root/.caddy/acme/acme-v02.api.letsencrypt.org/sites/123.com/123.com.key
+```
 
 ```
 z.xyz  {
