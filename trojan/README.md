@@ -1,6 +1,10 @@
 https://trojan-tutor.github.io/2019/04/10/p41.html    
 
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"   
+https://github.com/trojan-gfw/   
+
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
+```
 
 systemctl enable trojan  
 systemctl status trojan   
