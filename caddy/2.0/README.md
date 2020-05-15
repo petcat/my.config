@@ -22,4 +22,4 @@ groupadd --system caddy
 useradd --system --gid caddy --create-home --home-dir /var/lib/caddy --shell /usr/sbin/nologin --comment "Caddy web server" caddy
 ```
 
-wget -O /etc/systemd/system/caddy.service https://github.com/caddyserver/dist/blob/master/init/caddy.service
+wget -O /etc/systemd/system/caddy.service https://raw.githubusercontent.com/caddyserver/dist/master/init/caddy.service
