@@ -16,3 +16,8 @@ yum install yum-plugin-copr
 yum copr enable @caddy/caddy
 yum install caddy
 ```
+```
+# 建立用户组及用户
+groupadd --system caddy
+useradd --system --gid caddy --create-home --home-dir /var/lib/caddy --shell /usr/sbin/nologin --comment "Caddy web server" caddy
+```
