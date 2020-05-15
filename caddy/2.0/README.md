@@ -21,3 +21,5 @@ yum install caddy
 groupadd --system caddy
 useradd --system --gid caddy --create-home --home-dir /var/lib/caddy --shell /usr/sbin/nologin --comment "Caddy web server" caddy
 ```
+
+wget -O /etc/systemd/system/caddy.service https://github.com/caddyserver/dist/blob/master/init/caddy.service
