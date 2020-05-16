@@ -37,3 +37,22 @@ systemctl start caddy
 systemctl stop caddy
 systemctl reload caddy
 ```
+
+## Caddyfile 例子
+```
+iname.com, www.iname.com  {
+        root * /www/iname.com/public
+        file_server
+        tls  lighttpd@hotmail.com
+        encode zstd gzip
+}
+i.vlog.pp.ua { 
+        tls lighttpd@hotmail.com 
+        reverse_proxy  127.0.0.1:12345  
+}
+:88 {
+        root * /srv/down
+        file_server  browse
+        encode gzip
+}
+```
