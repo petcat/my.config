@@ -17,13 +17,62 @@ yum copr enable @caddy/caddy
 yum install caddy
 ```
 
-### 建立用户组及用户
+## 命令
+/usr/bin/caddy ,  /etc/caddy/Caddyfile ,   /usr/share/caddy/index.html
+```
+systemctl status caddy
+systemctl start caddy
+systemctl stop caddy
+systemctl reload caddy
+```
+## Caddyfile 例子
+```
+iname.com, www.iname.com  {
+        root * /www/iname.com/public
+        file_server
+        tls  lighttpd@hotmail.com
+        encode zstd gzip
+}
+i.pp.ua { 
+        tls lighttpd@hotmail.com 
+        reverse_proxy  127.0.0.1:12345  
+}
+:88 {
+        root * /srv/down
+        file_server  browse
+        encode gzip
+}
+```
+
+#### 合并公用
+```
+{
+        email  freessl@outlook.com
+}
+iname.com, www.iname.com  {
+        root * /www/iname.com/public
+        file_server
+        encode zstd gzip
+}
+i.pp.ua { 
+        reverse_proxy  127.0.0.1:12345  
+}
+:8080 {
+        root * /srv/
+        file_server  browse
+        encode zstd gzip
+}
+```
+
+
+----已过时
+### 建立用户组及用户（已过时）
 ```
 groupadd --system caddy
 useradd --system --gid caddy --create-home --home-dir /var/lib/caddy --shell /usr/sbin/nologin --comment "Caddy web server" caddy
 ```
 
-### 注册成为服务 
+### 注册成为服务 （已过时）
 ```
 #下载
 wget -O /etc/systemd/system/caddy.service https://raw.githubusercontent.com/caddyserver/dist/master/init/caddy.service
@@ -36,23 +85,4 @@ systemctl status caddy
 systemctl start caddy
 systemctl stop caddy
 systemctl reload caddy
-```
-
-## Caddyfile 例子
-```
-iname.com, www.iname.com  {
-        root * /www/iname.com/public
-        file_server
-        tls  lighttpd@hotmail.com
-        encode zstd gzip
-}
-i.vlog.pp.ua { 
-        tls lighttpd@hotmail.com 
-        reverse_proxy  127.0.0.1:12345  
-}
-:88 {
-        root * /srv/down
-        file_server  browse
-        encode gzip
-}
 ```
