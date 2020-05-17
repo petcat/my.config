@@ -1,4 +1,4 @@
-caddy 安装 
+### caddy v1.x 安装 （过时 弃用）
 
 `curl https://getcaddy.com | bash -s personal hook.service,http.cache,http.git,http.webdav,tls.dns.cloudflare`
 
