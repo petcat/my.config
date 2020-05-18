@@ -62,6 +62,9 @@ i.pp.ua {
         file_server  browse
         encode zstd gzip
 }
+# php_fastcgi unix//run/php/php7.4-fpm.sock
+# php_fastcgi 127.0.0.1:9000
+# php_fastcgi localhost:9005
 ```
 
 
