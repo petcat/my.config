@@ -59,6 +59,7 @@ https://www.name.com/zh-cn/referral/9d09
 https://affiliate.namecheap.com/?affId=9727  
 https://www.namesilo.com/register.php?rid=d1cc828dp    
 http://www.dynadot.com?s6127cY64kgO    
+https://www.epik.com/?affid=ti2lu4ve5  
 
 飞机   
 https://go.qianglie.cc/aff.php?aff=479
