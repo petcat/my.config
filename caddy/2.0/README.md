@@ -5,6 +5,7 @@
 https://caddyserver.com/docs/download
 ```
 # debian
+# apt install apt-transport-https
 echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | tee -a /etc/apt/sources.list.d/caddy-fury.list
 apt update
 apt install caddy
