@@ -26,8 +26,10 @@ systemctl start caddy
 systemctl stop caddy
 systemctl reload caddy
 ```
-## Caddyfile 例子
-wget -O /etc/caddy/ https://raw.githubusercontent.com/petcat/my.config/master/caddy/2.0/Caddyfile   
+## Caddyfile 例子 
+
+`wget -O /etc/caddy/Caddyfile https://raw.githubusercontent.com/petcat/my.config/master/caddy/2.0/Caddyfile`   
+
 ```
 iname.com, www.iname.com  {
         root * /www/iname.com/public
