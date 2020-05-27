@@ -1,0 +1,14 @@
+########## Caddy 2.0 #############
+# encode zstd gzip
+# file_server  browse
+# reverse_proxy  127.0.0.1:12345
+# php_fastcgi unix//run/php/php7.4-fpm.sock
+##############################################
+{
+        email  lighttpd@hotmail.com
+}
+:88 {
+        root * /srv/
+        file_server  browse
+        encode gzip
+}
