@@ -50,10 +50,20 @@ i.pp.ua {
 
 #### 合并公用
 ```
+####### Caddy 2.0 #####
 {
         email  freessl@outlook.com
 }
-iname.com, www.iname.com  {
+###################################
+www.aaaa.com {
+	redir https://aaaa.com{uri}
+}
+aaaa.com  {
+        root * /www/iname.com/public
+        file_server
+        encode zstd gzip
+}
+bbbb.com, www.bbbb.com  {
         root * /www/iname.com/public
         file_server
         encode zstd gzip
