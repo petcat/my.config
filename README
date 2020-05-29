@@ -1,5 +1,5 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        /etc/update-motd.d/108-vps-info
+        /etc/update-motd.d/90-vps-info
         run-parts /etc/update-motd.d/
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
  * Node:        node2
