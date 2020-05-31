@@ -1,10 +1,9 @@
 ## 安装Caddy 
 
-`curl -OL "https://github.com/caddyserver/caddy/releases/latest/download/ASSET`
+Ref: https://caddyserver.com/docs/download  
 
-https://caddyserver.com/docs/download
 ```
-# debian
+# debian & ubuntu
 # apt install apt-transport-https
 echo "deb [trusted=yes] https://apt.fury.io/caddy/ /" | tee -a /etc/apt/sources.list.d/caddy-fury.list
 apt update
@@ -12,10 +11,15 @@ apt install caddy
 ```
 
 ```
-# centos
+# centos 7
 yum install yum-plugin-copr
 yum copr enable @caddy/caddy
 yum install caddy
+
+# centos 8
+dnf install 'dnf-command(copr)'
+dnf copr enable @caddy/caddy
+dnf install caddy
 ```
 
 ## 命令
