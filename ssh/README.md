@@ -27,6 +27,8 @@ sed -i 's/^#\?Port 22/Port 10000/' /etc/ssh/sshd_config
 sed -i 's/^#\?PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config 
 sed -i 's/^#\?AuthorizedKeysFile/AuthorizedKeysFile/' /etc/ssh/sshd_config 
 systemctl restart ssh
+# 报错 sshd error: no more sessions
+sed -i 's/^#\?MaxSessions 10/MaxSessions 20/' /etc/ssh/sshd_config
 ```
 sed -i 's/#AuthorizedKeysFile .ssh/authorized_keys/AuthorizedKeysFile .ssh/authorized_keys/' /etc/ssh/sshd_config
 sed -i 's/#AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2/AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2/' /etc/ssh/sshd_config
