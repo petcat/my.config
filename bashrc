@@ -103,7 +103,7 @@ alias nohup='nohup >/dev/null 2>&1'
 alias no='setsid'
 alias wget0='wget --no-check-certificate'
 alias vpsinfo='run-parts /etc/update-motd.d/'
-alias ressh='service ssh restart'
+alias ressh='/etc/init.d/ssh restart'
 ## Web Server
 # Nginx
 alias nginxdir='cd /etc/nginx/conf.d'
@@ -135,6 +135,7 @@ alias mycaddy='caddy -service status'
 alias caddy-files='nano -w -m /usr/local/bin/Caddyfile'
 # other
 alias mkdocz='mkdocs build'
+alias ihugo='hugo new site'
 alias rev2ray='service v2ray restart'
 alias iv2ray='service v2ray status'
 alias rev2='service v2ray restart'
