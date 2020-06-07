@@ -100,6 +100,7 @@ alias nohup='nohup >/dev/null 2>&1'
 alias no='setsid'
 alias wget0='wget --no-check-certificate'
 # Web Server
+alias ihugo='hugo new site'
 alias nginxdir='cd /etc/nginx/conf.d'
 alias caddydir='cd /usr/local/bin/'
 alias renginx='/etc/init.d/nginx reload'
