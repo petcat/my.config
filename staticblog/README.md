@@ -40,7 +40,7 @@ gem install bundler jekyll
 下载主题，然后生成 `jekyll build` (jekyll b)  
 
 ---
-### 另一个方法
+### 另一个方法 debian 10 & ubuntu 18.04 以上
 https://computingforgeeks.com/how-to-install-jekyll-on-ubuntu-18-04/    
 
 ```
