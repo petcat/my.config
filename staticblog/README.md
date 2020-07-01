@@ -37,7 +37,21 @@ gem install bundler jekyll
 ```
 
 升级：`bundle update` 或 `gem update jekyll`    
-下载主题，然后生成 `jekyll build` (jekyll b)   
+下载主题，然后生成 `jekyll build` (jekyll b)  
+
+---
+### 另一个方法
+https://computingforgeeks.com/how-to-install-jekyll-on-ubuntu-18-04/    
+
+```
+apt -y install make build-essential    
+apt -y install ruby ruby-dev    
+```
+`source ~/.bashrc`   
+```
+gem install bundler   
+gem install jekyll    
+```
 
 ## Hexo
 https://hexo.io/themes/  
