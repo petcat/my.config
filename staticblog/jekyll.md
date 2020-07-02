@@ -24,6 +24,7 @@ gem install jekyll
 
 ```
 apt-add-repository -y ppa:rael-gc/rvm
+## 可能需要 apt install software-properties-common
 apt update
 apt install rvm
 # 开新窗口
