@@ -11,16 +11,18 @@ http://jekyllthemes.org/
 https://computingforgeeks.com/how-to-install-jekyll-on-ubuntu-18-04/    
 
 ```
+# 依赖
 apt -y install make build-essential    
 apt -y install ruby ruby-dev    
-```
-`source ~/.bashrc`   
-```
+
+# 
+source ~/.bashrc   
+
 gem install bundler   
 gem install jekyll    
 ```
 
-### Debian 9 以下
+### Ubuntu 16.04 以下
 
 ```
 apt-add-repository -y ppa:rael-gc/rvm
@@ -59,10 +61,14 @@ gem install bundler
 gem install jekyll  
 ```
 
+
+
+## 升级：
+
+`bundle update` 或 `gem update jekyll`    
+
 ## 使用
 
-升级：`bundle update` 或 `gem update jekyll`    
-
-下载主题，然后生成 `jekyll build` (jekyll b)  
+下载主题，指向目录 _site 然后生成 `jekyll build` (jekyll b)  
 
 
