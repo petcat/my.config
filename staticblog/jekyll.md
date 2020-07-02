@@ -5,6 +5,9 @@ https://jekyllthemes.io/free
 https://jekyllthemes.dev/   
 http://jekyllthemes.org/  
 
+https://jekyllthemes.dev/tag/landing-page/   
+https://jekyllthemes.dev/tag/resume/  
+
 ## 安装：  
 
 ### Debian 10 & ubuntu 18.04 以上
