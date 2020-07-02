@@ -50,6 +50,14 @@ gem install bundler jekyll
 >	jekyll-sass-converter requires Ruby version >= 2.4.0.    
 > 1 gem installed    
 
+### Alpine 安装
+
+```
+apk add ruby gcc g++ make 
+可能 add ruby-dev ruby-full
+gem install bundler   
+gem install jekyll  
+```
 
 ## 使用
 
