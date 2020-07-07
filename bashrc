@@ -107,10 +107,8 @@ alias vpsinfo='run-parts /etc/update-motd.d/'
 alias ressh='/etc/init.d/ssh restart'
 ## Web Server
 # Nginx
-alias nginxdir='cd /etc/nginx/conf.d'
-alias caddydir='cd /usr/local/bin/'
-alias renginx='/etc/init.d/nginx reload'
-alias inginx='/etc/init.d/nginx status'
+alias renginx='systemctl restart nginx'
+alias inginx='systemctl status nginx'
 # php
 alias rephp56='systemctl restart php5.6-fpm'
 alias rephp70='systemctl restart php7.0-fpm'
