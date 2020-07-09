@@ -23,6 +23,8 @@ http://images.linuxcontainers.org/meta/1.0/index-system
 ---
 ## 自启
 
+`rc-update add caddy boot`
+
 /etc/local.d/caddy.start
 
 /etc/init.d/caddy start
