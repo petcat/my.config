@@ -21,10 +21,17 @@ http://images.linuxcontainers.org/meta/1.0/index-system
 
 
 ---
-## 自启
+## caddy自启
 
 `rc-update add caddy boot`
 
-/etc/local.d/caddy.start
+或添加 `/etc/local.d/caddy.start` 自启文档，内容为 `/etc/init.d/caddy start` ，然后执行命令： `rc-update add local`
 
-/etc/init.d/caddy start
+`touch /etc/local.d/caddy.start && echo /etc/init.d/caddy start > /etc/local.d/caddy.start && rc-update add local`
+
+### Aria2c 自启
+```
+mkdir -p /etc/aria2 && touch /etc/aria2/aria2.session
+wget -O /etc/aria2/aria2.conf --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/aria2.conf
+touch /etc/local.d/aria2c.start && echo /usr/bin/aria2c --conf-path=/etc/aria2/aria2.conf -D > /etc/local.d/aria2c.start && rc-update add local
+```
