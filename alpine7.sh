@@ -48,7 +48,7 @@ export PATH="/usr/sbin:/usr/bin:/sbin:/bin"
 rm -rf /x
  
 apk update
-apk add openssh bash
+apk add openssh bash wget nano
 echo PermitRootLogin yes >> /etc/ssh/sshd_config
 rc-update add sshd default
 rc-update add mdev sysinit
