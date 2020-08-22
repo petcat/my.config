@@ -1,4 +1,7 @@
 ## 安装
+
+新版本： https://github.com/v2fly/fhs-install-v2ray/blob/master/README.zh-Hans-CN.md    
+
 ```
 # 安装v2   
 bash <(curl -L -s https://install.direct/go.sh)     
