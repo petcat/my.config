@@ -1,5 +1,5 @@
 ## 安装
-`curl -fsSL https://filebrowser.xyz/get.sh | bash`   
+`curl -fsSL https://filebrowser.org/get.sh | bash`   
 
 ## 设置
 
