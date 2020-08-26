@@ -1,8 +1,17 @@
 const shortLinks = [
+  // { key: '', value: '' },
   { key: 'b', value: 'https://www.bityun.co/#/register?code=HBBW8RJB' },
   { key: '1', value: 'https://justmysocks2.net/members/aff.php?aff=247&gid=1' },
   { key: 's', value: 'https://suying66.com/auth/register?code=59Ku' },
   { key: '9', value: 'https://cutecloud.space/aff.php?aff=1943&gid=1' },
+  { key: 'r', value: 'https://ssrssr.xyz/aff/hsXx' },
+  { key: 'd', value: 'https://pud.life/aff/VpNb' },
+  { key: 'g', value: 'https://www.gbssr.com/auth/register?code=R2CG' },
+  { key: 'o', value: 'https://5socloud.gq/auth/register?code=U1il' },
+  { key: 'q', value: 'http://t.smxhx.com/aff.php?aff=479&gid=1' },
+  { key: 'i', value: 'https://www.v2dy.co/#/register?code=PDEk7B5C' },
+  { key: '0', value: 'https://xbnet.site/i/iv200628/NNmbmfw' },
+  { key: 'y', value: 'https://youyun999.net/auth/register?code=6JW9' },
 ]
 
 addEventListener('fetch', event => {
