@@ -1,5 +1,11 @@
 const shortLinks = [
-  // { key: '', value: '' },
+  //  服务器 { key: '', value: '' },
+  { key: 'do', value: 'https://m.do.co/c/a029e98719e8' },
+  { key: 'vu', value: 'https://www.vultr.com/?ref=8406801-6G' },
+  { key: 'cc', value: 'https://app.cloudcone.com/?ref=2624' },
+  { key: 'on', value: 'https://www.onlinenic.com/en/Home/cloudReferral.html?usercode=0da7c2934ffb9a53405677661dac0085' },
+  { key: 'pr', value: 'https://pacificrack.com/portal/aff.php?aff=39' },
+  //  机场
   { key: 'b', value: 'https://www.bityun.co/#/register?code=HBBW8RJB' },
   { key: '1', value: 'https://justmysocks2.net/members/aff.php?aff=247&gid=1' },
   { key: 's', value: 'https://suying66.com/auth/register?code=59Ku' },
