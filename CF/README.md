@@ -66,7 +66,7 @@ addEventListener('fetch', event => {
     event.respondWith(fetchAndApply(event.request));
 })
 async function fetchAndApply(request) {
-    url = 'https://www.gbssr.com/auth/register?code=R2CG' 
+    url = 'https://www.gbssr.com/auth/register?code=MZmS' 
     return Response.redirect(url, 301)
 }
 ```
