@@ -12,7 +12,7 @@ const shortLinks = [
   { key: '9', value: 'https://cutecloud.space/aff.php?aff=1943&gid=1' },
   { key: 'r', value: 'https://ssrssr.xyz/aff/hsXx' },
   { key: 'd', value: 'https://pud.life/aff/VpNb' },
-  { key: 'g', value: 'https://www.gbssr.com/auth/register?code=R2CG' },
+  { key: 'g', value: 'https://www.gbssr.com/auth/register?code=MZmS' },
   { key: 'o', value: 'https://5socloud.gq/auth/register?code=U1il' },
   { key: 'q', value: 'http://t.smxhx.com/aff.php?aff=479&gid=1' },
   { key: 'i', value: 'https://www.v2dy.co/#/register?code=PDEk7B5C' },
