@@ -1,0 +1,105 @@
+# hugo 0.60 版本构建
+# 图片尺寸 300x200 位置： /themes/frontpage/static/assets/images
+# https://github.com/cowboysmall-tools/hugo-business-frontpage-theme.git
+# https://themes.gohugo.io/hugo-business-frontpage-theme/
+### #https://youyun777.net/auth/register?code=6JW9 #https://kuying777.pw/auth/register?code=sjDy
+##################################################
+baseURL = "https://880099.xyz/"
+languageCode = "en"
+title = "国际线路飞机场列表"
+theme = "frontpage"
+googleAnalytics = ""
+
+[params] # 描述
+    author = "Airport"
+    description = "全世界各国各地区机场全面介绍和评价"
+[params.navbar] # 页头菜单项
+        name = "飞机场"
+        url = "https://880099.xyz/"
+    [[params.navbar.nav]]
+        current = true
+        name = "在TG联系我"
+        url = "https://t.me/haojichang"
+       # [[params.navbar.nav]]
+       # name = "Site Map"
+       # url = "/sitemap.xml"
+       # [[params.navbar.nav]]
+       # name = "Services"
+       # url = "#"
+       # [[params.navbar.nav]]
+       # name = "Contact"
+       # url = "#"
+[params.header] #蓝底通栏描述
+        name = "大家一起飞"
+        tagline = "看着小飞机能飞起来，看到外面的世界是一件很惬意的事情，以下都是本人使用过才写在这里推荐给大家的机场；"
+        tagline2 = "机场的优点是简单方便，开箱即用；缺点是超售，越多人用越容易不稳，有些虽然给的节点很多，不过切来切去效果差不多的，机场容易跑路失踪，建议月付为主"
+
+[params.projects] #产品项  图片目录: /themes/frontpage/static/assets/images
+        [[params.projects.sections]] # title = "第一栏" 
+        [[params.projects.sections.rows]] # title = "第一栏, 第一列, 123项"
+        [[params.projects.sections.rows.items]] # 1-1
+        title = "瓦工大机场{非国人真老外}"
+        description = "真正老外加拿大机场(右上可选中文)单价$5.88/月的价钱不便宜但综合比较是最靠谱的没有之一，唯一不怕跑路可放心年付的机场：1、三网优化全程CN2 GIA线路并且新增东京CN2 GIA线路，游戏迷不要错过；2、真老外不跑路可放心年付($58约1.1元/天)；4、可支付宝结算(选Alipay)优惠码【JMS9272283】"
+        url = "http://i.880099.xyz/1"
+        image = "fjc.png"  #bwg.png
+        [[params.projects.sections.rows.items]] # 1-2 
+        title = "白云国际机场		{有黑科技}"
+        description = "这家单价不便宜但有意思有点黑科技，对多个省份都有针对性的本地加速中转，所以晚上视频速度都很不错，提供超过100个节点，主打奈飞有原生IP年付赠送奈飞4K账户(年付一向不推荐只作介绍)，主套餐24元月付起步，另有38元100G不限时的套餐，除了支付宝还支持数字货币购买，优惠码【Sdg3r5av】"
+        url = "http://i.880099.xyz/b"
+        image = "fjc.png"
+        [[params.projects.sections.rows.items]] # 1-3
+        title = "艾可云机场	{20元不限时}"
+        description = "这家是前面的低配版，没了黑科技晚上视频很一般，不过也提供近100个节点可选保证高可用性，入门套餐29元季付500G大流量，在这里推荐下一次性20元不限时间100G流量包，这对于不看视频不下载只用来Google、Gmail看个网页查资料的就非常适用了，看网页不烧流量，20元100G轻度使用2、3年可以的"
+        url = "http://i.880099.xyz/i"
+        image = "fjc.png"
+        [[params.projects.sections.rows]] # title = "第一栏, 第二列, 456项"
+        [[params.projects.sections.rows.items]] # 2-1-4
+        title = "全球通小机场		{可白嫖}"
+        description = "名字霸气但这家只有12个付费节点 + 4个免费白嫖节点，可惜只有年付套餐没月付的，最低56元一年60G月流量不过当前半价优惠28元一年，优惠码【50off】，考虑到年付价钱不高就介绍一下，这家亮点是允许10个设备数，这比其它家都要多一倍以上，需要多设备可以看看"
+        url = "http://i.880099.xyz/g"
+        image = "air.png"
+        [[params.projects.sections.rows.items]] # 2-2-5 #入门-基础-标准-旗舰
+        title = "速鹰大机场	{节点最多200+}"
+        description = "这家速鹰机场强悍大气，起步套餐9.9月付目前就有80个节点可用，套餐另分五个层次最高还有个旗舰版大流量套餐(88元1.2T流量每月)，最高套餐有200多个节点应该是节点最多的机场，这家是混合模式机场，多种协议都支持，后台工单回复很及时。"
+        url = "http://i.880099.xyz/s"
+        image = "air.png"
+        [[params.projects.sections.rows.items]] # 2-3-6
+        title = "强列老机场		{年付最低}"
+        description = "老机场本人1.99元绝版老套餐已用一年多了，不过之前水平很差，节点少又不太行，后来全线涨价之后倒是发力了线路稳定不少可以一用，目前入门6元月付或33元年付套餐，这家年付是当前已知最为便宜的，由于机场的特殊性本人一向不推荐年付，考虑老机场价格又足够低推荐一下"
+        url = "http://i.880099.xyz/q"
+        image = "air.png"
+        [[params.projects.sections]] # title = "第二栏"
+        [[params.projects.sections.rows]] # title = "第二栏, 第一列, 789项"
+        [[params.projects.sections.rows.items]] #3-1-7
+        title = "小布丁机场	{可1元试用}"
+        description = "这家最低38元/季或88元/年月流量都是128G，有近50个节点可选，节点有中转速度还不错，也贴心的提供了一个1元两天的试用套餐，无论测试和临时用用都可以，然后有个5折码50OFF可以试一下5折码还能用值得推荐"
+        url = "http://i.880099.xyz/d"
+        image = "ji.png"
+        [[params.projects.sections.rows.items]] #3-2-8
+        title = "搜云新机场	{主打稳可白嫖}"
+        description = "最低入门套餐35元/季度总共才80G流量，另有20、30、40元月付方案都贵，最多有近50个节点可供选择，也提供一个免费白嫖试用方案，就是签到送的的流量很抠门，只能应急用一下，不过贵有贵的道理这家主打稳和快，就算免费白嫖节点速度用起来也是免费中最好的系列，推荐一下"
+        url = "http://i.880099.xyz/o"
+        image = "ji.png"
+        [[params.projects.sections.rows.items]] #3-3-9
+        title = "可爱云机场	{低季付}"
+        description = "这家的确可爱，只有一个方案：9元/季度每月300G不限速，虽然便宜也有10来个节点可选，看视频的话白天速度还可以，晚上就一般不太行，不过也对得起这单价，对于不常看视频只用于看网页搜索资料来说完全够用。这是目前找到最便宜季付入门方案，推荐作为备用机场来搭配使用"
+        url = "http://i.880099.xyz/9"
+        image = "ji.png"
+        [[params.projects.sections.rows]] # title = "第二栏, 第二列, 101112项"
+        [[params.projects.sections.rows.items]]  #4-1-10
+        title = "安慕希机场	{IPLC打6折中}"
+        description = "大概是吃货，这家和上面小布丁是同一家，主推IPLC线路，但只有年付没有月付，6折优惠码【40off】后112.8元128G月流量起，还有个1元两天的试用，用于测试或临时用用不错，由于机场的特殊性容易跑路，除非年付特别便宜否则本人都不推荐购买，这里只作信息介绍"
+        url = "http://i.880099.xyz/r"
+        image = "fei.png"
+        [[params.projects.sections.rows.items]]  #4-2-11
+        title = "西部白嫖机场		{可白嫖三天}"
+        description = "机场自称是海外学子，但明显水土不服质量实在马马虎虎很一般，价钱也是贵，月付25元或年付188元起，节点虽多但就算最好的线路到了晚上也是不行，唯一优点是可以白嫖，一个邮箱可以免费用三天，对于临时用用紧急用一下的不错，这单价这质量白嫖就好真心不推荐付费购买"
+        url = "http://i.880099.xyz/0"
+        image = "fei.png"
+        [[params.projects.sections.rows.items]]  #4-3-12
+        title = "优云机场"
+        description = "这家和酷鹰是姐妹机场，套餐差不多，各有特色，节点目前没有酷鹰多，从最低9.9起步到50元，满足大多人的选择。"
+        url = "http://i.880099.xyz/y"
+        image = "fei.png"
+[params.footer]
+        copyright = "飞机场 小飞机 飞机票"
