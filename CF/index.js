@@ -21,6 +21,7 @@ const shortLinks = [
   { key: 'w', value: 'https://faster.bleakone.xyz/?code=mKIB' },
   { key: 'a', value: 'https://aaex.uk/aff.php?aff=1962&gid=1&language=chinese' },
   { key: '4', value: 'https://v2board.v2ray.life/#/register?code=hyhJ63CX' },
+  { key: 'f', value: 'https://fastlink.ws/auth/register?code=Jo7N' },
 ]
 
 addEventListener('fetch', event => {
