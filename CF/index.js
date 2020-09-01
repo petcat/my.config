@@ -20,6 +20,7 @@ const shortLinks = [
   { key: 'y', value: 'https://youyun999.net/auth/register?code=6JW9' },
   { key: 'w', value: 'https://faster.bleakone.xyz/?code=mKIB' },
   { key: 'a', value: 'https://aaex.uk/aff.php?aff=1962&gid=1&language=chinese' },
+  { key: '4', value: 'https://v2board.v2ray.life/#/register?code=hyhJ63CX' },
 ]
 
 addEventListener('fetch', event => {
