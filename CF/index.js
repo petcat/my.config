@@ -18,6 +18,7 @@ const shortLinks = [
   { key: 'i', value: 'https://www.v2dy.co/#/register?code=PDEk7B5C' },
   { key: '0', value: 'https://xbnet.site/i/iv200628/NNmbmfw' },
   { key: 'y', value: 'https://youyun999.net/auth/register?code=6JW9' },
+  { key: 'w', value: 'https://faster.bleakone.xyz/?code=mKIB' },
   { key: 'a', value: 'https://aaex.uk/aff.php?aff=1962&gid=1&language=chinese' },
 ]
 
