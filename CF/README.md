@@ -1,5 +1,14 @@
 ## Aff转发
 
+```
+http://i.shadowsocksr.shop {
+	redir /j https://jpeg.men
+	redir /l https://hostloc.com
+}
+```
+
+
+
 ##### 白云, b,bi
 ```
 addEventListener('fetch', event => {
