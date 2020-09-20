@@ -13,9 +13,13 @@
 
 设置日志位置：`filebrowser -d /etc/filebrowser.db config set --log /var/log/filebrowser.log`    
 
+添加验证码：`filebrowser -d /etc/filebrowser.db config set --auth.method=json --recaptcha.key site-key --recaptcha.secret private-key`
+
 添加一个用户：`filebrowser -d /etc/filebrowser.db users add root password --perm.admin`    
 其中的root和password分别是用户名和密码，根据自己的需求更改。    
 整合：`filebrowser -d /etc/filebrowser.db config set --address 0.0.0.0 --port 777 --locale zh-cn --log /var/log/filebrowser.log`    
+
+
 
 ## 开机启动（systemd）：   
 
