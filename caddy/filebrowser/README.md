@@ -15,9 +15,11 @@
 
 设置默认目录：`filebrowser -d /etc/filebrowser.db config set --scope /srv`
 
+设置网盘名字：`filebrowser -d /etc/filebrowser.db config set --name XX`
+
 设置默认网址：`filebrowser -d /etc/filebrowser.db config set --baseurl https://xxxxx`
 
-添加验证码：`filebrowser -d /etc/filebrowser.db config set --auth.method=json --recaptcha.key site-key --recaptcha.secret private-key`
+添加验证码：`filebrowser -d /etc/filebrowser.db config set --auth.method=json --recaptcha.key XXXXXXX --recaptcha.secret XXXXXXX`
 
 国内用户使用：`filebrowser -d /etc/filebrowser.db config set --recaptcha.host https://recaptcha.net`
 
