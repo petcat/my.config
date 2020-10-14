@@ -1,8 +1,8 @@
 'use strict'
 
-/**
-* static files (404.html, sw.js, conf.js)
-*/
+/** Ref: https://github.com/EtherDream/jsproxy
+ * static files (404.html, sw.js, conf.js)
+ */
 const ASSET_URL = 'https://etherdream.github.io/jsproxy'
 
 const JS_VER = 10
@@ -19,10 +19,10 @@ const PREFLIGHT_INIT = {
 }
 
 /**
-* @param {any} body
-* @param {number} status
-* @param {Object<string, string>} headers
-*/
+ * @param {any} body
+ * @param {number} status
+ * @param {Object<string, string>} headers
+ */
 function makeRes(body, status = 200, headers = {}) {
   headers['--ver'] = JS_VER
   headers['access-control-allow-origin'] = '*'
@@ -31,8 +31,8 @@ function makeRes(body, status = 200, headers = {}) {
 
 
 /**
-* @param {string} urlStr
-*/
+ * @param {string} urlStr 
+ */
 function newUrl(urlStr) {
   try {
     return new URL(urlStr)
@@ -50,8 +50,8 @@ addEventListener('fetch', e => {
 
 
 /**
-* @param {FetchEvent} e
-*/
+ * @param {FetchEvent} e 
+ */
 async function fetchHandler(e) {
   const req = e.request
   const urlStr = req.url
@@ -85,9 +85,9 @@ async function fetchHandler(e) {
 
 
 /**
-* @param {Request} req
-* @param {string} pathname
-*/
+ * @param {Request} req
+ * @param {string} pathname
+ */
 function httpHandler(req, pathname) {
   const reqHdrRaw = req.headers
   if (reqHdrRaw.has('x-jsproxy')) {
@@ -163,11 +163,11 @@ function httpHandler(req, pathname) {
 
 
 /**
-*
-* @param {URL} urlObj
-* @param {RequestInit} reqInit
-* @param {number} retryTimes
-*/
+ * 
+ * @param {URL} urlObj 
+ * @param {RequestInit} reqInit 
+ * @param {number} retryTimes 
+ */
 async function proxy(urlObj, reqInit, acehOld, rawLen, retryTimes) {
   const res = await fetch(urlObj.href, reqInit)
   const resHdrOld = res.headers
@@ -256,8 +256,8 @@ async function proxy(urlObj, reqInit, acehOld, rawLen, retryTimes) {
 
 
 /**
-* @param {URL} urlObj
-*/
+ * @param {URL} urlObj 
+ */
 function isYtUrl(urlObj) {
   return (
     urlObj.host.endsWith('.googlevideo.com') &&
@@ -266,10 +266,10 @@ function isYtUrl(urlObj) {
 }
 
 /**
-* @param {URL} urlObj
-* @param {number} newLen
-* @param {Response} res
-*/
+ * @param {URL} urlObj 
+ * @param {number} newLen 
+ * @param {Response} res 
+ */
 async function parseYtVideoRedir(urlObj, newLen, res) {
   if (newLen > 2000) {
     return null
