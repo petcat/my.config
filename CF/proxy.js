@@ -1,6 +1,6 @@
 'use strict'
 
-/** Ref: https://github.com/EtherDream/jsproxy
+/** Ref: https://github.com/EtherDream/jsproxy 
  * static files (404.html, sw.js, conf.js)
  */
 const ASSET_URL = 'https://etherdream.github.io/jsproxy'
