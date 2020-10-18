@@ -1,4 +1,4 @@
-## Aff转发
+## Aff转发[Caddyfile]
 
 ```
 http://i.shadowsocksr.shop {
@@ -6,9 +6,19 @@ http://i.shadowsocksr.shop {
 	redir /l https://hostloc.com
 }
 ```
-
-
-
+### 通用
+```
+addEventListener(
+"fetch",event => {
+let url=new URL(event.request.url);
+url.hostname="de.113355.xyz";
+let request=new Request(url,event.request);
+event. respondWith(
+fetch(request)
+)
+}
+)
+```
 ##### 白云, b,bi
 ```
 addEventListener('fetch', event => {
