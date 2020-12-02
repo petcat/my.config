@@ -3,10 +3,10 @@ mkdir -p /etc/aria2 && touch /etc/aria2/aria2.session
 
 ## 下载aria2c配置文件
 
-自用
+##### 自用      
 `wget -O /etc/aria2/aria2.conf --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/tools/aria2/aria2.conf`
 
-公用 aria2c.cn
+##### 公用 aria2c.cn    
 `wget -O /etc/aria2/aria2.conf --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/aria2.conf`
 
 ## 注册成为 aria2c 服务
