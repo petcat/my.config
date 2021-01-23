@@ -17,3 +17,10 @@ https://github.com/petcat/my.config/tree/master/caddy/1.0
 # 部分旧系统使用
 /etc/init/caddy.conf 
 ```
+
+### zblog 配置
+```
+yourdomain.com {
+  try_files {path} /index.php?{path}
+}
+```
