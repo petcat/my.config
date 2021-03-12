@@ -29,6 +29,8 @@ sed -i 's/^#\?AuthorizedKeysFile/AuthorizedKeysFile/' /etc/ssh/sshd_config
 systemctl restart ssh
 # 报错 sshd error: no more sessions
 sed -i 's/^#\?MaxSessions 10/MaxSessions 20/' /etc/ssh/sshd_config
+# 开启 root 登录（甲骨文、谷歌云）
+sed -i 's/^#\?PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 ```
 sed -i 's/#AuthorizedKeysFile .ssh/authorized_keys/AuthorizedKeysFile .ssh/authorized_keys/' /etc/ssh/sshd_config
 sed -i 's/#AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2/AuthorizedKeysFile .ssh/authorized_keys .ssh/authorized_keys2/' /etc/ssh/sshd_config
