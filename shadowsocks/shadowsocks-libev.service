@@ -1,0 +1,12 @@
+[Unit]
+  Description=Shadowsocks-Libev Server
+  After=network-online.target
+   
+[Service]
+  Type=simple
+  ExecStart=/usr/bin/snap run shadowsocks-libev.ss-server -c /var/snap/shadowsocks-libev/config.json
+  Restart=always
+  RestartSec=2
+   
+[Install]
+WantedBy=multi-user.target
