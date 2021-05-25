@@ -2,12 +2,13 @@
 
 `wget https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.sh`
 
-======================================
-1. 启动: systemctl start shadowsocks-libev.service
-2. 状态: systemctl status shadowsocks-libev.service
+## 使用
+1. 启动: systemctl start shadowsocks-libev
+2. 状态: systemctl status shadowsocks-libev
 3. 配置文件: /var/snap/shadowsocks-libev/config.json
 4. 更新升级: snap refresh shadowsocks-libev --edge
-======================================
+
+---
 
 
 
