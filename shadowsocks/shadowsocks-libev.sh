@@ -1,18 +1,18 @@
 #!/bin/bash
 #Set shadowsocks server port
 echo "Please shadowsocks server port:"
-read -t 30 -p "(Default: 8188):" SS_PORT
+read -t 30 -p "(Default: 9999):" SS_PORT
 if [ "$SS_PORT" = "" ]; then
-SS_PORT="8188"
+SS_PORT="9999"
 fi
 echo "shadowsocks server port:$SS_PORT"
 echo "####################################"
 
 #Set shadowsocks server password
 echo "Please shadowsocks server password:"
-read -t 30 -p "(Default: mjj):" SS_PASSWORD
+read -t 30 -p "(Default: ss):" SS_PASSWORD
 if [ "$SS_PASSWORD" = "" ]; then
-SS_PASSWORD="mjj"
+SS_PASSWORD="A9cF9aFFbB11c72c"
 fi
 echo "shadowsocks server Password:$SS_PASSWORD"
 echo "####################################"
