@@ -1,3 +1,8 @@
+## 安装
+
+`wget https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.sh`
+
+
 ## BBR
 
 #### 1、nano /etc/sysctl.conf
