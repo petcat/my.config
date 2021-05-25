@@ -1,13 +1,33 @@
 ## 安装
 
+```
+apt update
+apt install -y snapd
+snap install shadowsocks-libev --edge
+```
+
+#### 服务   
+
+`wget -O /etc/systemd/system/shadowsocks-libev.service https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.service`
+
+#### 配置文件：
+
+`wget -O /var/snap/shadowsocks-libev/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev/config.json`
+
+
+## 一键安装
+
 `wget https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.sh`
+`chmod +x shadowsocks-libev.sh && ./shadowsocks-libev.sh`
 
 ## 使用
+
 1. 启动: systemctl start shadowsocks-libev
 2. 状态: systemctl status shadowsocks-libev
 3. 配置文件: /var/snap/shadowsocks-libev/config.json
 4. 更新升级: snap refresh shadowsocks-libev --edge
-
+5. 开机自启：systemctl enable shadowsocks-libev
+6. 取消启动：systemctl disable shadowsocks-libev
 ---
 
 
