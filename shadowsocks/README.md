@@ -38,9 +38,10 @@ net.ipv4.tcp_max_orphans = 32768
 net.ipv4.ip_forward = 1
 ```
 
+
 ---
-已弃用
 ---
+
 
 
 ### Installl:
