@@ -3,6 +3,8 @@
 ```
 apt update
 apt install -y snapd
+## Debian
+snap install core 
 snap install shadowsocks-libev --edge
 ```
 
