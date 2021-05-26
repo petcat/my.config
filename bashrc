@@ -158,6 +158,7 @@ alias ssstart='systemctl start shadowsocks-libev'
 alias ssstop='systemctl stop shadowsocks-libev'
 alias ress='systemctl restart shadowsocks-libev'
 alias iss='systemctl status shadowsocks-libev'
+alias upss='snap refresh shadowsocks-libev --edge'
 # Transfer
 alias zhuan='curl --upload-file'
 # Dwnload
