@@ -26,8 +26,9 @@ cat <<END >/var/snap/shadowsocks-libev/config.json
     "server": "0.0.0.0",
     "server_port":"${SS_PORT}",
     "password":"${SS_PASSWORD}",
+    "local_port":1080,
     "timeout": 300,
-    "method":"aes-256-gcm",
+    "method":"chacha20-ietf-poly1305",
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp"
 }
