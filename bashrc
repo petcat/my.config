@@ -78,6 +78,7 @@ fi
 alias ll='ls -halF'
 alias la='ls -A'
 alias l='ls -CF'
+alias bbr='lsmod | grep bbr'
 alias ping='ping -c 9'
 alias aliass='source ~/.bashrc'
 alias pk='pkill -9'
