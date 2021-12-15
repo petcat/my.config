@@ -1,3 +1,4 @@
+```
 cat > /etc/systemd/system/peer2profit.service <<EOF
 [Unit]
 Description=peer2profit
@@ -12,3 +13,4 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
+```
