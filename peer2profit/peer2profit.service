@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=p2pclient --login test@mail.com
+ExecStart=p2pclient --login virus110@gmail.com
 RemainAfterExit=true
 Restart=on-failure
 
