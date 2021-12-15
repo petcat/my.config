@@ -1,0 +1,12 @@
+[Unit]
+Description=peer2profit
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=p2pclient --login test@mail.com
+RemainAfterExit=true
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
