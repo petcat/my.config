@@ -1,3 +1,5 @@
+`wget -O /etc/systemd/system/peer2profit.service https://raw.githubusercontent.com/petcat/my.config/master/peer2profit/peer2profit.service`
+
 ```
 cat > /etc/systemd/system/peer2profit.service <<EOF
 [Unit]
