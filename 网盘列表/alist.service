@@ -1,0 +1,12 @@
+[Unit]
+Description=alist
+After=network.target
+ 
+[Service]
+Type=simple
+WorkingDirectory=path_alist
+ExecStart=/usr/local/bin/alist -conf /etc/alist/config.json
+Restart=on-failure
+ 
+[Install]
+WantedBy=multi-user.target
