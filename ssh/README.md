@@ -8,7 +8,7 @@ PasswordAuthentication no
 
 ```
 # 创建
-mkdir /root/.ssh && chmod 600 /root/.ssh && touch .ssh/authorized_keys && touch .ssh/authorized_keys2 && chmod 700 /root/.ssh/a*  
+mkdir /root/.ssh && chmod 600 /root/.ssh && touch /root/.ssh/authorized_keys /root/.ssh/authorized_keys2 && chmod 700 /root/.ssh/*  
  
 # 下载 --no-check-certificate
 wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/25519
