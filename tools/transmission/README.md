@@ -5,8 +5,10 @@ apt install software-properties-common -y
 add-apt-repository ppa:transmissionbt/ppa 
 apt update && apt install transmission-daemon -y  
 ```
-
+```
 wget -O /etc/transmission-daemon/settings.json https://raw.githubusercontent.com/petcat/my.config/master/tools/transmission/settings.json
+mkdir -p /srv/transmission/download && mkdir -p /srv/transmission/temp
+```
 
 
 ### 命令
