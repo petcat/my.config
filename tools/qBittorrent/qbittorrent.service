@@ -1,0 +1,15 @@
+[Unit]
+Description=qBittorrent-nox service
+Documentation=man:qbittorrent-nox(1)
+Wants=network-online.target
+After=network-online.target nss-lookup.target
+
+[Service]
+# if you have systemd < 240 (Ubuntu 18.10 and earlier, for example), you probably want to use Type=simple instead
+Type=exec
+# change user as needed
+User=qbtuser
+ExecStart=/usr/bin/qbittorrent-nox
+
+[Install]
+WantedBy=multi-user.target
