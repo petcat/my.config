@@ -5,10 +5,9 @@ Wants=network-online.target
 After=network-online.target nss-lookup.target
 
 [Service]
-# if you have systemd < 240 (Ubuntu 18.10 and earlier, for example), you probably want to use Type=simple instead
 Type=exec
-# change user as needed
-User=qbtuser
+LimitNOFILE=512000
+User=root
 ExecStart=/usr/bin/qbittorrent-nox
 
 [Install]
