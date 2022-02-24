@@ -5,6 +5,7 @@
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+export PATH=$PATH:~/.cargo/bin
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
