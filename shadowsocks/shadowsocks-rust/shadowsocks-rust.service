@@ -1,0 +1,15 @@
+[Unit]
+Description=Shadowsocks-Rust Custom Client Service.
+Documentation=sslocal -h
+After=network.target
+
+[Service]
+Type=simple
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+User=nobody
+Group=nogroup
+ExecStart=/usr/local/bin/sslocal --log-without-time -c /etc/shadowsocks-rust/config.json
+
+[Install]
+WantedBy=multi-user.target
