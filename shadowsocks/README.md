@@ -19,7 +19,8 @@ wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https
 
 ### 使用
 ```
-snap start --enable shadowsocks-rust.ssserver-daemon
+自启：snap start --enable shadowsocks-rust.ssserver-daemon
+启动：snap start shadowsocks-rust.ssserver-daemon
 snap services shadowsocks-rust.ssserver-daemon
 
 ```
