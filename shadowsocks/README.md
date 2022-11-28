@@ -6,6 +6,8 @@ apt install -y snapd
 ## Debian
 snap install core 
 snap install shadowsocks-libev --edge
+## 
+snap install shadowsocks-rust
 ```
 
 #### 服务   
