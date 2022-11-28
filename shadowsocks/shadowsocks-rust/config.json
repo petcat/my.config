@@ -1,19 +1,8 @@
 {
-    "servers": [
-        {
-            "address": "0.0.0.0",
-            "port": 1080,
-            "password": "A9cF9aFFbB11c72c",
-            "method": "chacha20-ietf-poly1305"
-            "timeout": 300
-        },
-        {
-            "address": "0.0.0.0",
-            "port": 1081,
-            "password": "A9cF9aFFbB11c72c",
-            "method": "chacha20-ietf-poly1305"
-        }
-    ],
-    "local_port": 8388,
-    "local_address": "8.8.8.8"
+    "server": "0.0.0.0",
+    "server_port": 8443,
+    "password": "A9cF9aFFbB11c72c",
+    "method": "chacha20-ietf-poly1305",
+    "local_address": "127.0.0.1",
+    "local_port": 1080
 }
