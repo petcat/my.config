@@ -1,15 +1,39 @@
 ## 安装
 
+## shadowsocks-rust
+
+```
+apt update
+apt install -y snapd
+## Debian
+snap install core 
+snap install shadowsocks-rust
+```
+
+#### 配置文件
+
+```
+mkdir -p /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust
+wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-rust/config.json
+```
+
+### 使用
+```
+snap start --enable shadowsocks-rust.ssserver-daemon
+snap services shadowsocks-rust.ssserver-daemon
+
+```
+
+
+---
+### shadowsocks-libev
 ```
 apt update
 apt install -y snapd
 ## Debian
 snap install core 
 snap install shadowsocks-libev --edge
-## 
-snap install shadowsocks-rust
 ```
-
 #### 服务   
 
 `wget -O /etc/systemd/system/shadowsocks-libev.service https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.service`
@@ -19,7 +43,7 @@ snap install shadowsocks-rust
 `wget -O /var/snap/shadowsocks-libev/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev/config.json`
 
 
-## 一键安装
+#### 一键安装 (旧)
 
 `wget https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.sh`
 `chmod +x shadowsocks-libev.sh && ./shadowsocks-libev.sh`
