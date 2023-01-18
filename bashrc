@@ -164,6 +164,7 @@ alias resss='snap restart shadowsocks-rust.ssserver-daemon'
 alias iss='systemctl status shadowsocks-libev'
 alias myss='snap services shadowsocks-rust.ssserver-daemon'
 alias upss='snap refresh shadowsocks-libev --edge'
+alias upsss='snap refresh shadowsocks-rust'
 # Transfer
 alias zhuan='curl --upload-file'
 # Dwnload
