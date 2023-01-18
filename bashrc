@@ -1,3 +1,4 @@
+# wget -O .bashrc --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/bashrc && source ~/.bashrc
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -159,7 +160,9 @@ alias fb-status='systemctl status filebrowser.service'
 alias ssstart='systemctl start shadowsocks-libev'
 alias ssstop='systemctl stop shadowsocks-libev'
 alias ress='systemctl restart shadowsocks-libev'
+alias resss='snap restart shadowsocks-rust.ssserver-daemon'
 alias iss='systemctl status shadowsocks-libev'
+alias myss='snap services shadowsocks-rust.ssserver-daemon'
 alias upss='snap refresh shadowsocks-libev --edge'
 # Transfer
 alias zhuan='curl --upload-file'
