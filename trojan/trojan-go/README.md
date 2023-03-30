@@ -1,28 +1,26 @@
-/usr/share/trojan-go/geoip.dat
-/usr/share/trojan-go/geosite.dat
-
-/var/lib/caddy/.local/share/caddy/certificates/acme.zerossl.com-v2-dv90/xxxx.com
-
 
 -----------------------------------
 ## 新建临时目录：
 `mkdir trojan`   
 
-## 下载并解压 https://github.com/p4gefau1t/trojan-go/releases
+## 下载并解压 
+https://github.com/p4gefau1t/trojan-go/releases  
 `wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip && unzip trojan-go-linux-amd64.zip`
+
+目录结构
 ```
 ├── example
-│   ├── client.json
-│   ├── client.yaml
-│   ├── server.json
-│   ├── server.yaml
-│   ├── trojan-go.service
+│   ├── client.json    --客户端
+│   ├── client.yaml    --客户端
+│   ├── server.json    --服务端
+│   ├── server.yaml    --服务端
+│   ├── trojan-go.service  --自启服务
 │   └── trojan-go@.service
-├── geoip.dat
-├── geoip-only-cn-private.dat
-├── geosite.dat
-├── trojan-go
-└── trojan-go-linux-amd64.zip
+├── geoip.dat  --路由
+├── geoip-only-cn-private.dat   --路由
+├── geosite.dat   --路由
+├── trojan-go    --主程序
+└── trojan-go-linux-amd64.zip --压缩包
 ```
 可以清楚看到，已经都齐备。只需要修改一下就能用。
 
