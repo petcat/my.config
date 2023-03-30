@@ -6,11 +6,11 @@
 
 -----------------------------------
 ## 新建临时目录：
-`mkdir trojan`
+`mkdir trojan`   
 
 ## 下载并解压 https://github.com/p4gefau1t/trojan-go/releases
 `wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip && unzip trojan-go-linux-amd64.zip`
-
+```
 ├── example
 │   ├── client.json
 │   ├── client.yaml
@@ -23,18 +23,18 @@
 ├── geosite.dat
 ├── trojan-go
 └── trojan-go-linux-amd64.zip
-
+```
 可以清楚看到，已经都齐备。只需要修改一下就能用。
 
 ## 再新建目录：
-`mkdir /etc/trojan-go/`
-`mkdir /usr/share/trojan-go/`
+`mkdir /etc/trojan-go/`  
+`mkdir /usr/share/trojan-go/`  
 
 ## 归档主程序、路由、服务端、自启
-`mv trojan-go /usr/bin/`
-`mv geo* /usr/share/trojan-go/`
-`mv example/server.json /etc/trojan-go/`
-`mv example/trojan-go.service /etc/systemd/system`
+`mv trojan-go /usr/bin/`  
+`mv geo* /usr/share/trojan-go/`  
+`mv example/server.json /etc/trojan-go/`  
+`mv example/trojan-go.service /etc/systemd/system`  
 
 ## 修改配置
 ### 自启配置，基本不用修改
