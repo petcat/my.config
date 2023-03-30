@@ -38,7 +38,7 @@ https://github.com/p4gefau1t/trojan-go/releases
 ### 自启配置，基本不用修改
 `nano /etc/systemd/system/trojan-go.service`
 ### 服务端配置，需要修改成自己
-`nano /etc/trojan-go/server.json`
+`nano /etc/trojan-go/config.json`
 
 备注：使用caddy 证书目录 `/var/lib/caddy/.local/share/caddy/certificates/acme.zerossl.com-v2-dv90/xxxx.com`
 
