@@ -42,3 +42,9 @@ https://github.com/p4gefau1t/trojan-go/releases
 
 备注：使用caddy 证书目录 `/var/lib/caddy/.local/share/caddy/certificates/acme.zerossl.com-v2-dv90/xxxx.com`
 
+```
+启动: systemctl start trojan-go
+状态: systemctl status trojan-go
+开机自启：systemctl enable trojan-go
+取消启动：systemctl disable trojan-go
+```
