@@ -31,7 +31,7 @@ https://github.com/p4gefau1t/trojan-go/releases
 ## 归档主程序、路由、服务端、自启
 `mv trojan-go /usr/bin/`  
 `mv geo* /usr/share/trojan-go/`  
-`mv example/server.json /etc/trojan-go/`  
+`mv example/server.json /etc/trojan-go/config.json`  
 `mv example/trojan-go.service /etc/systemd/system`  
 
 ## 修改配置
