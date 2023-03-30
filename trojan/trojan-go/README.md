@@ -7,7 +7,7 @@
 https://github.com/p4gefau1t/trojan-go/releases  
 `wget https://github.com/p4gefau1t/trojan-go/releases/download/v0.10.6/trojan-go-linux-amd64.zip && unzip trojan-go-linux-amd64.zip`
 
-目录结构
+### 目录结构
 ```
 ├── example
 │   ├── client.json    --客户端
