@@ -1,8 +1,9 @@
 ####################### Caddy 2.0 #####################
 # encode zstd gzip
 # file_server  browse
-# reverse_proxy  127.0.0.1:12345
+# reverse_proxy  127.0.0.1:12345  
 # php_fastcgi unix//run/php/php7.4-fpm.sock
+# php_fastcgi localhost:9000
 # --------------------------------------------
 # www.aaaa.com {
 #	 redir https://aaaa.com{uri}
