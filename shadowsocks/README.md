@@ -24,6 +24,7 @@ wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https
 重启：snap restart shadowsocks-rust.ssserver-daemon
 停止：snap stop shadowsocks-rust.ssserver-daemon
 状态：snap services shadowsocks-rust.ssserver-daemon
+     systemctl status snap.shadowsocks-rust.ssserver-daemon.service
 ```
 
 
