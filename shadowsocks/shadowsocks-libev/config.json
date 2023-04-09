@@ -1,5 +1,5 @@
 {
-    "server":["0.0.0.0"],
+    "server":["::0","0.0.0.0"],
     "mode":"tcp_and_udp",
     "server_port":8443,
     "local_port":1080,
