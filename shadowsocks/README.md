@@ -24,6 +24,7 @@ wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https
 重启：snap restart shadowsocks-rust.ssserver-daemon
 停止：snap stop shadowsocks-rust.ssserver-daemon
 状态：snap services shadowsocks-rust.ssserver-daemon
+更新升级: snap refresh shadowsocks-rust
      systemctl status snap.shadowsocks-rust.ssserver-daemon.service
 ```
 
@@ -50,23 +51,16 @@ wget -O /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json htt
 重启：systemctl restart snap.shadowsocks-libev.ss-server-daemon.service   
 启动：systemctl start snap.shadowsocks-libev.ss-server-daemon.service 
 停止：systemctl stop snap.shadowsocks-libev.ss-server-daemon.service 
+更新升级: snap refresh shadowsocks-libev --edge
 ```
 
 #### 服务（旧）     
 
 `wget -O /etc/systemd/system/shadowsocks-libev.service https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.service`
 
-#### 配置文件：
-
-`wget -O /var/snap/shadowsocks-libev/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev/config.json`
 
 
-#### 一键安装 (旧)
-
-`wget https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.sh`
-`chmod +x shadowsocks-libev.sh && ./shadowsocks-libev.sh`
-
-## 使用
+## 使用（旧）
 ```
 1. 启动: systemctl start shadowsocks-libev
 2. 状态: systemctl status shadowsocks-libev
@@ -123,58 +117,4 @@ net.ipv4.ip_forward = 1
 ---
 
 
-
-### Installl:
-```
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh && chmod +x shadowsocks-all.sh && ./shadowsocks-all.sh
-```
-
-### Reinstall
-`./shadowsocks-all.sh uninstall`
-
-### Config file:
-```
-/etc/shadowsocks-python/config.json
-wget -O /etc/shadowsocks-python/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-python/config.json && /etc/init.d/shadowsocks-python restart
-
-/etc/shadowsocks-r/config.json
-wget -O /etc/shadowsocks-r/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-r/config.json && /etc/init.d/shadowsocks-r restart
-
-/etc/shadowsocks-go/config.json
-wget -O /etc/shadowsocks-go/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-go/config.json && /etc/init.d/shadowsocks-go restart
-
-/etc/shadowsocks-libev/config.json
-```
-
-### Command
-
-Shadowsocks-Python ：
-```
-/etc/init.d/shadowsocks-python status
-/etc/init.d/shadowsocks-python start
-/etc/init.d/shadowsocks-python restart
-/etc/init.d/shadowsocks-python stop
-```
-
-ShadowsocksR ：
-```
-/etc/init.d/shadowsocks-r status
-/etc/init.d/shadowsocks-r start
-/etc/init.d/shadowsocks-r restart
-/etc/init.d/shadowsocks-r stop
-```
-Shadowsocks-Go ：
-```
-/etc/init.d/shadowsocks-go status
-/etc/init.d/shadowsocks-go start
-/etc/init.d/shadowsocks-go restart
-/etc/init.d/shadowsocks-go stop
-```
-Shadowsocks-libev ：
-```
-/etc/init.d/shadowsocks-libev status
-/etc/init.d/shadowsocks-libev start
-/etc/init.d/shadowsocks-libev restart
-/etc/init.d/shadowsocks-libev stop
-```
 
