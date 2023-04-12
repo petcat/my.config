@@ -34,10 +34,25 @@ wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https
 apt update
 apt install -y snapd
 ## Debian
-snap install core 
+~~snap install core~~ 
 snap install shadowsocks-libev --edge
 ```
-#### 服务   
+
+#### 配置文件
+```
+mkdir -p /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev
+wget -O /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev/config.json
+```
+## 使用
+```
+自启：snap start --enable shadowsocks-libev.ss-server-daemon   
+状态：systemctl status snap.shadowsocks-libev.ss-server-daemon.service   
+重启：systemctl restart snap.shadowsocks-libev.ss-server-daemon.service   
+启动：systemctl start snap.shadowsocks-libev.ss-server-daemon.service 
+停止：systemctl stop snap.shadowsocks-libev.ss-server-daemon.service 
+```
+~~~~~
+#### 服务（旧）     
 
 `wget -O /etc/systemd/system/shadowsocks-libev.service https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-libev.service`
 
