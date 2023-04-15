@@ -5,6 +5,7 @@
 ```
 apt update
 apt install -y snapd
+apt install -y haveged
 ## Debian
 snap install core 
 snap install shadowsocks-rust
