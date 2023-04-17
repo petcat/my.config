@@ -5,5 +5,5 @@
     "method": "chacha20-ietf-poly1305",
     "local_address": "127.0.0.1",
     "mode":"tcp_and_udp",
-    "local_port": 1080    
+    "fast_open":true    
 }
