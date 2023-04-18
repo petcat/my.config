@@ -13,10 +13,10 @@ snap install shadowsocks-rust
 
 #### 配置文件
 
-```
-mkdir -p /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust
-wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-rust/config.json
-```
+
+`mkdir -p /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust`  
+`wget -O /var/snap/shadowsocks-rust/common/etc/shadowsocks-rust/config.json https://raw.githubusercontent.com/petcat/my.config/master/shadowsocks/shadowsocks-rust/config.json`
+
 
 ### 使用
 ```
