@@ -1,0 +1,22 @@
+#!/bin/sh
+# uname -snrvm
+
+echo "
+#
+        /etc/update-motd.d/90-vps-info
+        run-parts /etc/update-motd.d/
+        ln /etc/motd /root/README
+===========================================================================
+- Release.............: `lsb_release -r | awk {'print $2'}`
+- Kernel..............: `uname -r`
+- Hostname............: `uname -n`
+- Username............: `whoami`
+- IP..................: 
+`netstat -ntu | grep tcp | awk '{print $5}' | cut -d: -f1 | sort | uniq`
+- Login Users.........: Total `users | wc -w` user(s)
+#
+- CPU usage...........: $LOAD1 - $LOAD5 - $LOAD15 (1-5-15 min)
+- Memory..............: $MEMORY
+- Memory usage........: $MEM_USAGE
+===========================================================================
+"
