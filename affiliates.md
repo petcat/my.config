@@ -50,7 +50,7 @@ https://my.losangelesvps.com/aff.php?aff=288
 无限流量  
 13刀一年，无限流量 （优惠码：zhujiceping）https://www.changeip.com/accounts/aff.php?aff=3383&pid=63   
 
-# ChunkHost $50 消费$50
+### ChunkHost $50 消费$50
 https://chunkhost.com/r/vps-hosting   
 https://chunkhost.com/r/bonus  
 
@@ -61,12 +61,6 @@ https://www.namesilo.com/register.php?rid=d1cc828dp
 http://www.dynadot.com?s6127cY64kgO    
 https://www.epik.com/?affid=ti2lu4ve5  
 
-飞机   
-https://go.qianglie.cc/aff.php?aff=479
-
-https://tianlinzhao.com/aff.php?aff=386
-
-https://justmysocks1.net/members/aff.php?aff=247
-
+Payoneer
 
 https://share.payoneer.com/nav/-MSLRMSsubfuco9e-IzIpdYJ7lzSogi-FHI2V7zITYXSheRfSwGLKsZXhndXdg4NcvFw4Y5OMpiY64a6SHhE0w2
