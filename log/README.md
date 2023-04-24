@@ -1,7 +1,7 @@
 ## 日志占用及清理   
 
 `du -h /var/log`  
-`journalctl --disk-usage`
+`journalctl --disk-usage`  
 `du -h --max-depth=1 /`
 
 ```
