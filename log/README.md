@@ -28,7 +28,7 @@ journalctl --vacuum-files=5
 SystemMaxUse=500M
 systemctl restart systemd-journald
 ```
-
+`sed -i 's/^#\?SystemMaxUse=/SystemMaxUse=500M/' /etc/systemd/journald.conf`
 
 ### 直接停用日志
 ```
