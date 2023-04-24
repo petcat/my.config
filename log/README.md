@@ -2,6 +2,7 @@
 
 `du -h /var/log`  
 `journalctl --disk-usage`
+`du -h --max-depth=1 /`
 
 ```
 # 清理7天之前的日志
