@@ -33,7 +33,12 @@ systemctl restart systemd-journald
 
 ### 直接停用日志
 ```
+## 停用 rsyslog
 systemctl stop syslog.socket rsyslog.service 
 systemctl disable rsyslog.service 
 systemctl status rsyslog 
+## 停用 systemd-journald
+systemctl stop systemd-journald systemd-journald.socket 
+systemctl disable systemd-journald.service
+systemctl status systemd-journald
 ```
