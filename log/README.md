@@ -38,7 +38,7 @@ systemctl stop syslog.socket rsyslog.service
 systemctl disable rsyslog.service 
 systemctl status rsyslog 
 ## 停用 systemd-journald
-systemctl stop systemd-journald systemd-journald.socket 
+systemctl stop systemd-journald systemd-journald.socket systemd-journald-dev-log.socket
 systemctl disable systemd-journald.service
 systemctl status systemd-journald
 ```
