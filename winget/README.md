@@ -10,7 +10,7 @@ https://winstall.app/
  winget uninstall --purge & winget remove & winget rm --purge   
 
 ## 安装商店版 
-`winget install  -s msstore`
+winget install  -s msstore   
 
 ```
 #火绒
@@ -23,8 +23,16 @@ winget install XP8C9QZMS2PC1T -s msstore
 winget install 9PDJ8X9SPF2K -s msstore
 # firefox
 winget install -s msstore 9NZVDKPMR9RD
-
-
+# termius
+winget install 9NK1GDVPX09V -s msstore 
+# edge
+winget install XPFFTQ037JWMHS -s msstore 
+# Potplayer
+winget install -s msstore XP8BSBGQW2DKS0
+# 7-zip
+winget install -s msstore XPDNKVCX4QD2DC
+# Powertoy
+winget install -s msstore XP89DCGQ3K6VLD
 
 ```
 
@@ -43,9 +51,13 @@ winget install --id iFlytek.iFlyIME
 winget install --id Nevcairiel.LAVFilters
 winget install --id Bopsoft.Listary
 
-winget install --id Brave.Brave.Nightly 
-winget install --id Brave.Brave.Dev 
+winget install --id Brave.Brave.Nightly -e
+winget install --id Brave.Brave.Dev -e
 winget install -e --id=Brave.Brave.Beta
+
+winget install -e --id=Microsoft.Edge.Dev 
+winget install -e --id=Microsoft.Edge.Beta
+winget install -e --id=Microsoft.Edge.Canary
 
 #指定安装版本
 winget install --id Bandisoft.Bandizip -v 6.26
