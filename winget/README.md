@@ -17,14 +17,16 @@ winget install  -s msstore
 winget install XPDDXVFRXCXK80 -s msstore
 # shareX
 winget install 9NBLGGH4Z1SP -s msstore
+# Deepl
+winget install XPDNX7G06BLH2G -s msstore
 # Brave Browser
 winget install XP8C9QZMS2PC1T -s msstore
 # edge
 winget install XPFFTQ037JWMHS -s msstore 
-# foobar200
-winget install 9PDJ8X9SPF2K -s msstore
 # firefox
 winget install -s msstore 9NZVDKPMR9RD
+# foobar200
+winget install 9PDJ8X9SPF2K -s msstore
 # termius
 winget install 9NK1GDVPX09V -s msstore
 # Potplayer
@@ -58,6 +60,7 @@ winget install --id Nevcairiel.LAVFilters
 winget install --id iFlytek.iFlyIME
 winget install --id Bopsoft.Listary
 winget install --id voidtools.Everything
+winget install --id Dropbox.Dropbox
 winget install --id AsaphaHalifa.AudioRelay
 winget install --id SoftDeluxe.FreeDownloadManager
 winget install --id Wondershare.PDFelement.CN
