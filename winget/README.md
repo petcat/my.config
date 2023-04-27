@@ -51,6 +51,7 @@ winget install --id iFlytek.iFlyIME
 winget install --id Nevcairiel.LAVFilters
 winget install --id Bopsoft.Listary
 winget install --id AsaphaHalifa.AudioRelay
+winget install --id SoftDeluxe.FreeDownloadManager
 
 ## 浏览器
 winget install --id Brave.Brave.Nightly -e
