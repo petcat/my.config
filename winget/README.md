@@ -13,7 +13,7 @@ https://winstall.app/
 
 ```
 #火绒
-winget install XPDDXVFRXCXK80 -s msstore
+winget install --id XPDDXVFRXCXK80 -s msstore
 
 
 
