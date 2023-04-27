@@ -66,6 +66,7 @@ winget install --id SoftDeluxe.FreeDownloadManager
 winget install --id Wondershare.PDFelement.CN
 
 ## 浏览器
+winget install --id Google.Chrome -e
 winget install --id Brave.Brave.Nightly -e
 winget install --id Brave.Brave.Dev -e
 winget install --id Brave.Brave.Beta -e
