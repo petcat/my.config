@@ -46,6 +46,7 @@ winget install --id=Microsoft.WindowsTerminal -e
 winget install --id Eugeny.Tabby
 # 笔记
 winget install --id=SublimeHQ.SublimeText.4  -e
+winget install --id=Notion.Notion -e
 winget install --id=Automattic.Simplenote  -e
 winget install --id=appmakes.Typora  -e
 winget install --id=NetEase.YoudaoNote  -e
@@ -59,6 +60,7 @@ winget install --id Bopsoft.Listary
 winget install --id voidtools.Everything
 winget install --id AsaphaHalifa.AudioRelay
 winget install --id SoftDeluxe.FreeDownloadManager
+winget install --id Wondershare.PDFelement.CN
 
 ## 浏览器
 winget install --id Brave.Brave.Nightly -e
