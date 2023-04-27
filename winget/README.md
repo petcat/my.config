@@ -41,29 +41,29 @@ winget install -s msstore XP89DCGQ3K6VLD
 ## 安装软件
 
 ```
-winget install --id v2rayA.v2rayA
-winget upgrade --id v2rayA.v2rayA
+winget install --id v2rayA.v2rayA -e
+winget upgrade --id v2rayA.v2rayA -e
 #终端 
 winget install --id=Microsoft.WindowsTerminal -e
 winget install --id Eugeny.Tabby
 # 笔记
-winget install --id=SublimeHQ.SublimeText.4  -e
+winget install --id=SublimeHQ.SublimeText.4 -e
 winget install --id=Notion.Notion -e
-winget install --id=Automattic.Simplenote  -e
-winget install --id=appmakes.Typora  -e
-winget install --id=NetEase.YoudaoNote  -e
-winget install --id=Alibaba.Yuque  -e
+winget install --id=Automattic.Simplenote -e
+winget install --id=appmakes.Typora -e
+winget install --id=NetEase.YoudaoNote -e
+winget install --id=Alibaba.Yuque -e
 # 播放器 & 解码
 winget install --id Daum.PotPlayer
 winget install --id Nevcairiel.LAVFilters
 # 工具
-winget install --id iFlytek.iFlyIME
-winget install --id Bopsoft.Listary
-winget install --id voidtools.Everything
-winget install --id Dropbox.Dropbox
-winget install --id AsaphaHalifa.AudioRelay
-winget install --id SoftDeluxe.FreeDownloadManager
-winget install --id Wondershare.PDFelement.CN
+winget install -e --id iFlytek.iFlyIME
+winget install -e --id Bopsoft.Listary
+winget install -e --id voidtools.Everything
+winget install -e --id Dropbox.Dropbox
+winget install -e --id AsaphaHalifa.AudioRelay
+winget install -e --id SoftDeluxe.FreeDownloadManager
+winget install -e --id Wondershare.PDFelement.CN
 
 ## 浏览器
 winget install --id Google.Chrome -e
