@@ -19,12 +19,16 @@ winget install XPDDXVFRXCXK80 -s msstore
 winget install 9NBLGGH4Z1SP -s msstore
 # Deepl
 winget install XPDNX7G06BLH2G -s msstore
+# F.lux 
+winget install 9N9KDPHV91JT -s msstore
 # Brave Browser
 winget install XP8C9QZMS2PC1T -s msstore
 # edge
 winget install XPFFTQ037JWMHS -s msstore 
 # firefox
 winget install -s msstore 9NZVDKPMR9RD
+# Opera Stable 
+winget install -s msstore XP8CF6S8G2D5T6
 # foobar200
 winget install 9PDJ8X9SPF2K -s msstore
 # termius
@@ -33,6 +37,10 @@ winget install 9NK1GDVPX09V -s msstore
 winget install -s msstore XP8BSBGQW2DKS0
 # 7-zip
 winget install -s msstore XPDNKVCX4QD2DC
+# Direct Whois            
+winget install -s msstore 9WZDNCRFK0B4          
+# Whois View              
+winget install -s msstore 9WZDNCRDLVMT
 # Powertoy
 winget install -s msstore XP89DCGQ3K6VLD
 
@@ -55,6 +63,7 @@ winget install --id=NetEase.YoudaoNote -e
 winget install --id=Alibaba.Yuque -e
 # 播放器 & 解码
 winget install --id Daum.PotPlayer
+winget install --id Tencent.QQPlayer
 winget install --id Nevcairiel.LAVFilters
 # 工具
 winget install -e --id iFlytek.iFlyIME
