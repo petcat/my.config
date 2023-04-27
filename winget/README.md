@@ -2,12 +2,12 @@
 https://winstall.app/
 
  ## 命令：
- winget list & winget upgrade
- winget search
+ winget list & winget upgrade  
+ winget search  
  
- winget install & winget add
- winget upgrade & winget update
- winget uninstall --purge & winget remove & winget rm --purge
+ winget install & winget add   
+ winget upgrade & winget update   
+ winget uninstall --purge & winget remove & winget rm --purge   
 
 ## 安装商店版
 
