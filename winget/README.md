@@ -19,14 +19,14 @@ winget install XPDDXVFRXCXK80 -s msstore
 winget install 9NBLGGH4Z1SP -s msstore
 # Brave Browser
 winget install XP8C9QZMS2PC1T -s msstore
+# edge
+winget install XPFFTQ037JWMHS -s msstore 
 # foobar200
 winget install 9PDJ8X9SPF2K -s msstore
 # firefox
 winget install -s msstore 9NZVDKPMR9RD
 # termius
-winget install 9NK1GDVPX09V -s msstore 
-# edge
-winget install XPFFTQ037JWMHS -s msstore 
+winget install 9NK1GDVPX09V -s msstore
 # Potplayer
 winget install -s msstore XP8BSBGQW2DKS0
 # 7-zip
@@ -41,22 +41,29 @@ winget install -s msstore XP89DCGQ3K6VLD
 ```
 winget install --id v2rayA.v2rayA
 winget upgrade --id v2rayA.v2rayA
-
+#终端 
 winget install --id=Microsoft.WindowsTerminal -e
 winget install --id Eugeny.Tabby
-winget install --id SublimeHQ.SublimeText.3
-winget install --id voidtools.Everything
+# 笔记
+winget install --id=SublimeHQ.SublimeText.4  -e
+winget install --id=Automattic.Simplenote  -e
+winget install --id=appmakes.Typora  -e
+winget install --id=NetEase.YoudaoNote  -e
+winget install --id=Alibaba.Yuque  -e
+# 播放器 & 解码
 winget install --id Daum.PotPlayer
-winget install --id iFlytek.iFlyIME
 winget install --id Nevcairiel.LAVFilters
+# 工具
+winget install --id iFlytek.iFlyIME
 winget install --id Bopsoft.Listary
+winget install --id voidtools.Everything
 winget install --id AsaphaHalifa.AudioRelay
 winget install --id SoftDeluxe.FreeDownloadManager
 
 ## 浏览器
 winget install --id Brave.Brave.Nightly -e
 winget install --id Brave.Brave.Dev -e
-winget install -e --id=Brave.Brave.Beta
+winget install --id Brave.Brave.Beta -e
 
 winget install -e --id=Microsoft.Edge.Dev 
 winget install -e --id=Microsoft.Edge.Beta
