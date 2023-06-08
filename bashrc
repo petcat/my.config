@@ -181,6 +181,7 @@ alias rearia2c='systemctl restart aria2c'
 alias ydl='youtube-dl -F'
 alias dl='youtube-dl -f'
 alias dl1080='youtube-dl -f 137+140'
+aloas ytdl='yt-dlp -f ‘bv[ext=mp4]+ba[ext=m4a]’'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
