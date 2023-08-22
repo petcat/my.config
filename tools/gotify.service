@@ -4,8 +4,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=gotify
-Group=gotify
 WorkingDirectory=/usr/local/bin
 ExecStart=/usr/local/bin/gotify
 Restart=on-failure
