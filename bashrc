@@ -124,6 +124,8 @@ alias ressh='/etc/init.d/ssh restart'
 alias renginx='systemctl restart nginx'
 alias inginx='systemctl status nginx'
 # php
+alias rephp='systemctl restart php*'
+alias phpstatus='systemctl status php*'
 alias rephp56='systemctl restart php5.6-fpm'
 alias rephp70='systemctl restart php7.0-fpm'
 alias rephp71='systemctl restart php7.1-fpm'
