@@ -148,9 +148,10 @@ alias caddy-start='caddy -service start'
 alias caddy-status='caddy -service status'
 alias mycaddy='caddy -service status'
 alias caddy-files='nano -w -m /usr/local/bin/Caddyfile'
-# other
+# web site
 alias mkdocz='mkdocs build'
 alias ihugo='hugo new site'
+# hello world
 alias rev2ray='service v2ray restart'
 alias iv2ray='service v2ray status'
 alias rev2='service v2ray restart'
@@ -181,9 +182,9 @@ alias aria2c-stop='systemctl stop aria2c'
 alias iaria2c='systemctl status aria2c'
 alias myaria2c='systemctl status aria2c'
 alias rearia2c='systemctl restart aria2c'
-alias ydl='youtube-dl -F'
-alias dl='youtube-dl -f'
-alias dl1080='youtube-dl -f 137+140'
+alias ydl='yt-dlp -F'
+alias dl='yt-dlp -f'
+alias dl1080='yt-dlp -f 137+140'
 alias ytdl='yt-dlp -f "bv[ext=mp4]+ba[ext=m4a]"'
 
 # Alias definitions.
