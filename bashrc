@@ -8,6 +8,11 @@ export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 export PATH=$PATH:~/.cargo/bin
 
+# Add Goling
+export GOROOT=/usr/local/go
+export PATH="$PATH:$GOROOT/bin"
+export GOPATH=$HOME/go/lib:$HOME/go/work
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -88,6 +93,7 @@ alias wget-website='wget -c -r -np -k -L -p'
 alias systart='systemctl start'
 alias systop='systemctl stop'
 alias systatus='systemctl status'
+alias sysre='systemctl restart'
 alias update='apt update'
 alias upgrade='apt update && apt upgrade'
 alias remove='apt remove'
@@ -105,7 +111,7 @@ alias tarz='tar -czvf'
 alias untar='tar -zxvf'
 alias gits='git clone'
 alias sou='find / -name'
-alias finds='find / -name'
+alias find='find / -name'
 alias deb='dpkg -i'
 alias get='setsid'
 alias nohup='nohup >/dev/null 2>&1'
@@ -158,16 +164,11 @@ alias fb-start='systemctl start filebrowser'
 alias fb-stop='systemctl stop filebrowser'
 alias ifb='systemctl status filebrowser'
 alias fb-status='systemctl status filebrowser.service'
-alias startss='systemctl start snap.shadowsocks*'
-alias startsss='snap start shadowsocks-rust.ssserver-daemon'
-alias stopss='systemctl stop snap.shadowsocks*'
-alias stopsss='snap stop shadowsocks-rust.ssserver-daemon'
-alias ress='systemctl restart snap.shadowsocks*'
-alias resss='snap restart shadowsocks-rust.ssserver-daemon'
-alias iss='systemctl status 'snap.shadowsocks*''
-alias isss='systemctl status snap.shadowsocks-rust.ssserver-daemon.service'
-alias upss='snap refresh shadowsocks-libev'
-alias upsss='snap refresh shadowsocks-rust'
+alias startss='snap start shadowsocks-rust.ssserver-daemon'
+alias stopss='snap stop shadowsocks-rust.ssserver-daemon'
+alias ress='snap restart shadowsocks-rust.ssserver-daemon'
+alias iss='systemctl status snap.shadowsocks-rust.ssserver-daemon.service'
+alias upss='snap refresh shadowsocks-rust'
 # Transfer
 alias zhuan='curl --upload-file'
 # Dwnload
