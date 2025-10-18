@@ -3,7 +3,7 @@ Description=Shadowsocks-Rust Server
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/ssserver--encrypt-method chacha20-ietf-poly1305 --server-addr 0.0.0.0:44433 --config /etc/shadowsocks-rust/config.json -u
+ExecStart=/usr/local/bin/ssserver -c /etc/shadowsocks-rust/config.json -u
 Restart=on-failure
 User=nobody
 Group=nogroup
