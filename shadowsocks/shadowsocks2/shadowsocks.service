@@ -1,0 +1,13 @@
+[Unit]
+Description=Shadowsocks-Rust Server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ssserver -c /etc/shadowsocks-rust/config.json
+Restart=on-failure
+User=nobody
+Group=nogroup
+LimitNOFILE=32768
+
+[Install]
+WantedBy=multi-user.target
