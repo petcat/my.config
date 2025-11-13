@@ -18,19 +18,18 @@ LATEST_URL=$(curl -s https://api.github.com/repos/shadowsocks/shadowsocks-rust/r
 echo "⬇️ 下載: $LATEST_URL"
 curl -L "$LATEST_URL" -o /tmp/ssr.tar.xz
 
-# 4. 解壓並安裝
+# 4. 解压并安装
 tar -xf /tmp/ssr.tar.xz -C /tmp
 install -m 755 /tmp/ssserver "$INSTALL_DIR/ssserver"
 
-# 5. 建立配置檔
+# 5. 建立配置
 cat > "$CONFIG_DIR/config.json" <<EOF
 {
-    "server": "::",
-    "server_port": 20443,
-    "password": "A9cF9aFFbB11c72c",
-    "timeout": 300,
-    "method": "aes-128-gcm",
-    "mode": "tcp_and_udp"
+  "server": "::",
+  "server_port": 20443,
+  "password": "A9cF9aFFbB11c72c49fC10bDF0f75eeD",
+  "method": "aes-128-gcm",
+  "mode": "tcp_only"
 }
 EOF
 
@@ -41,13 +40,11 @@ Description=Shadowsocks-Rust Server
 After=network.target
 
 [Service]
-ExecStart=$INSTALL_DIR/ssserver -c $CONFIG_DIR/config.json
+ExecStart=/usr/local/bin/ssserver -c /etc/shadowsocks-rust/config.json
 Restart=on-failure
 User=nobody
 Group=nogroup
-CapabilityBoundingSet=CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
+LimitNOFILE=32768
 
 [Install]
 WantedBy=multi-user.target
@@ -58,5 +55,5 @@ systemctl daemon-reexec
 systemctl daemon-reload
 systemctl enable shadowsocks
 systemctl start shadowsocks
-
+systemctl status shadowsocks
 echo "✅ Shadowsocks-Rust 安裝與啟動完成！"
