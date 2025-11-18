@@ -1,6 +1,7 @@
 # my.config
 
-https://raw.githubusercontent.com/petcat/my.config/master/.bashrc
+
+wget -O /root/.bashrc https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/bashrc
 https://raw.githubusercontent.com/petcat/my.config/master/alpine.sh
 
 `wget -O .bashrc --no-check-certificate https://raw.githubusercontent.com/petcat/my.config/master/bashrc && source ~/.bashrc`  
