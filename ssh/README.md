@@ -42,3 +42,9 @@ echo Port 10000 >> /etc/ssh/sshd_config
 echo PasswordAuthentication no >> /etc/ssh/sshd_config
 echo AuthorizedKeysFile  .ssh/authorized_keys .ssh/authorized_keys2 >> /etc/ssh/sshd_config
 ```
+## bashrc 
+```
+wget /root/.bashrc https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc
+wget /root/.profile https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc
+wget /root/.bash_aliases https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bash_aliases
+```
