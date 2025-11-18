@@ -44,7 +44,7 @@ echo AuthorizedKeysFile  .ssh/authorized_keys .ssh/authorized_keys2 >> /etc/ssh/
 ```
 ## bashrc 
 ```
-wget /root/.bashrc https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc
-wget /root/.profile https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc
-wget /root/.bash_aliases https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bash_aliases
+wget -O /root/.bashrc https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc && source ~/.bashrc
+wget -O /root/.profile https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc && source ~/.profile
+wget -O /root/.bash_aliases https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bash_aliases
 ```
