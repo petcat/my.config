@@ -1,3 +1,4 @@
+
 ## sshd_config
 ```
 Port 10000      
@@ -42,9 +43,9 @@ echo Port 10000 >> /etc/ssh/sshd_config
 echo PasswordAuthentication no >> /etc/ssh/sshd_config
 echo AuthorizedKeysFile  .ssh/authorized_keys .ssh/authorized_keys2 >> /etc/ssh/sshd_config
 ```
-## bashrc 
+# Alias 2026
+
 ```
-wget -O /root/.bashrc https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc && source ~/.bashrc
-wget -O /root/.profile https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bashrc && source ~/.profile
-wget -O /root/.bash_aliases https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/bash_aliases
+wget -O /root https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.my_aliases
+wget -O /root https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.profile && . ~/.profile
 ```
