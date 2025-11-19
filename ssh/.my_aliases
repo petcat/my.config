@@ -1,0 +1,41 @@
+#  alias
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+# 快速查看磁盘和内存
+alias df='df -h'
+alias du='du -h --max-depth=1'
+alias free='free -h'
+
+# 系统信息
+alias df='df -h'
+alias du='du -h --max-depth=1'
+alias free='free -m'
+alias rc='rc-service'
+alias iss='rc-service shadowsocks status'
+
+# Git 常用简化
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git log --oneline --graph --decorate'
+
+# 网络工具
+alias ping='ping -c 5'
+alias wget='wget -c'
+
+####
+# OpenRC (Alpine) 服务管理
+if command -v rc-service >/dev/null 2>&1; then
+    alias rc='rc-service'
+fi
+
+# systemd (Debian/Ubuntu) 服务管理
+if command -v systemctl >/dev/null 2>&1; then
+    alias sys='systemctl'
+fi
