@@ -48,20 +48,11 @@ alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
-
-
-
-
+#~~~~~~~~~~
 alias tmux0='tmux a -t 0'
 alias tmux1='tmux a -t 1'
-
-
-
-
-
 alias armup='armbian-update -b no'
 alias kk='armbian-update -b no'
-
 # Transfer
 alias zhuan='curl --upload-file'
 # Dwnload
@@ -76,7 +67,6 @@ alias dl='yt-dlp -f'
 alias dl1080='yt-dlp -f 137+140'
 alias ytdl='yt-dlp -f "bv[ext=mp4]+ba[ext=m4a]"'
 alias wget-website='wget -c -r -np -k -L -p'
-
 #############################################################
 # 检测系统类型
 if grep -qi alpine /etc/os-release; then
