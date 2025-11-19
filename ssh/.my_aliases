@@ -5,37 +5,161 @@ alias mv='mv -i'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-
-# 快速查看磁盘和内存
-alias df='df -h'
-alias du='du -h --max-depth=1'
-alias free='free -h'
+# 压缩 & 解压缩
+alias targz='tar -zcvf'
+alias tarbz='tar -jcvf'
+alias tarxz='tar -Jcvf'
+alias untargz='tar -zxvf'
+alias untarbz='tar -jxvf'
+alias untarxz='tar -Jxvf'
 
 # 系统信息
 alias df='df -h'
 alias du='du -h --max-depth=1'
 alias free='free -m'
+alias bbr='lsmod | grep bbr'
+alias pk='pkill -9'
+alias ping='ping -c 5'
+alias wget='wget -c'
+alias ver='lsb_release -a'
+alias sysver='lsb_release -a'
+alias nano='nano -w -m'
+alias scr='screen -R one'
+alias find='find / -name'
+alias deb='dpkg -i'
+alias get='setsid'
+alias nohup='nohup >/dev/null 2>&1'
+alias no='setsid'
+alias wget0='wget --no-check-certificate'
+alias vpsinfo='run-parts /etc/update-motd.d/'
+alias ressh='/etc/init.d/ssh restart'
+
 alias rc='rc-service'
 alias iss='rc-service shadowsocks status'
 
+# fix hostname 
+alias hostnamectl1='hostnamectl set-hostname --static'
+alias hostnamectl2='hostnamectl set-hostname --pretty'
+alias hostnamectl3='hostnamectl set-hostname --transienty'
 # Git 常用简化
+alias gits='git clone'
 alias gs='git status'
 alias ga='git add .'
 alias gc='git commit -m'
 alias gp='git push'
 alias gl='git log --oneline --graph --decorate'
 
-# 网络工具
-alias ping='ping -c 5'
-alias wget='wget -c'
 
-####
-# OpenRC (Alpine) 服务管理
-if command -v rc-service >/dev/null 2>&1; then
-    alias rc='rc-service'
+
+
+alias tmux0='tmux a -t 0'
+alias tmux1='tmux a -t 1'
+
+
+
+
+
+alias armup='armbian-update -b no'
+alias kk='armbian-update -b no'
+# systemctl 
+alias resys='systemctl restart'
+alias sysre='systemctl restart'
+alias systart='systemctl start'
+alias systop='systemctl stop'
+alias systatus='systemctl status'
+alias sysstart='systemctl start'
+alias sysstop='systemctl stop'
+alias sysstatus='systemctl status'
+
+
+
+## Web Server
+# Nginx
+alias renginx='systemctl restart nginx'
+alias inginx='systemctl status nginx'
+# php
+alias rephp='systemctl restart php*'
+alias phpstatus='systemctl status php*'
+alias rephp56='systemctl restart php5.6-fpm'
+alias rephp70='systemctl restart php7.0-fpm'
+alias rephp71='systemctl restart php7.1-fpm'
+alias rephp72='systemctl restart php7.2-fpm'
+alias rephp73='systemctl restart php7.3-fpm'
+alias rephp74='systemctl restart php7.4-fpm'
+# caddy 2.x
+alias icaddy='systemctl status caddy'
+alias recaddy='systemctl reload caddy'
+alias stopcaddy='systemctl stop caddy'
+alias caddyoff='systemctl stop caddy'
+alias startcaddy='systemctl start caddy'
+alias caddyon='systemctl start caddy'
+alias caddyfiles='mcedit /etc/caddy/Caddyfile'
+alias caddyfile='nano -w -m /etc/caddy/Caddyfile'
+# caddy 1.x
+alias caddy-re='caddy -service restart'
+alias caddy-stop='caddy -service stop'
+alias caddy-start='caddy -service start'
+alias caddy-status='caddy -service status'
+alias mycaddy='caddy -service status'
+alias caddy-files='nano -w -m /usr/local/bin/Caddyfile'
+# web site
+alias mkdocz='mkdocs build'
+alias ihugo='hugo new site'
+# hello world
+alias rev2ray='service v2ray restart'
+alias iv2ray='service v2ray status'
+alias rev2='service v2ray restart'
+alias iv2='service v2ray status'
+alias v2stop='service v2ray stop'
+alias v2start='service v2ray start'
+alias itrojan='systemctl status trojan'
+alias retrojan='systemctl restart trojan'
+alias trojan-start='systemctl start trojan'
+alias trojan-stop='systemctl stop trojan'
+alias refb='systemctl restart filebrowser'
+alias fb-start='systemctl start filebrowser'
+alias fb-stop='systemctl stop filebrowser'
+alias ifb='systemctl status filebrowser'
+alias fb-status='systemctl status filebrowser.service'
+alias startss='snap start shadowsocks-rust.ssserver-daemon'
+alias stopss='snap stop shadowsocks-rust.ssserver-daemon'
+alias ress='snap restart shadowsocks-rust.ssserver-daemon'
+alias iss='systemctl status snap.shadowsocks-rust.ssserver-daemon.service'
+alias upss='snap refresh shadowsocks-rust'
+# Transfer
+alias zhuan='curl --upload-file'
+# Dwnload
+alias aira2c='aria2c'
+alias aria2c-start='systemctl start aria2c'
+alias aria2c-stop='systemctl stop aria2c'
+alias iaria2c='systemctl status aria2c'
+alias myaria2c='systemctl status aria2c'
+alias rearia2c='systemctl restart aria2c'
+alias ydl='yt-dlp -F'
+alias dl='yt-dlp -f'
+alias dl1080='yt-dlp -f 137+140'
+alias ytdl='yt-dlp -f "bv[ext=mp4]+ba[ext=m4a]"'
+alias wget-website='wget -c -r -np -k -L -p'
+
+#############################################################
+# 检测系统类型
+if grep -qi alpine /etc/os-release; then
+    # Alpine 系统 (OpenRC + apk)
+    alias update='apk update'
+    alias upgrade='apk update && apk upgrade'
+    alias install='apk add'
+    alias remove='apk del'
+    alias search='apk search'
+    alias ervice='rc-service'
+
+elif grep -qi debian /etc/os-release || grep -qi ubuntu /etc/os-release; then
+    # Debian/Ubuntu 系统 (systemd + apt)
+    alias update='apt update'
+    alias upgrade='apt update && apt upgrade'
+    alias install='apt install'
+    alias remove='apt remove'
+    alias search='apt search'
+    alias service='systemctl'
 fi
 
-# systemd (Debian/Ubuntu) 服务管理
-if command -v systemctl >/dev/null 2>&1; then
-    alias sys='systemctl'
-fi
+
