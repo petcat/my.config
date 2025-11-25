@@ -9,12 +9,17 @@ PasswordAuthentication no
 
 ```
 # 创建
-mkdir /root/.ssh && chmod 600 /root/.ssh && touch /root/.ssh/authorized_keys /root/.ssh/authorized_keys2 && chmod 700 /root/.ssh/*  
+mkdir /root/.ssh && touch /root/.ssh/authorized_keys /root/.ssh/authorized_keys2 && chmod 700 /root/.ssh/*  
  
 # 下载 --no-check-certificate
 wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/25519
 wget -O .ssh/authorized_keys2 https://raw.githubusercontent.com/petcat/my.config/master/ssh/default
 wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/master/ssh/new
+```
+NEW
+```
+mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "你的公钥内容" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys
+
 ```
 
 ```
