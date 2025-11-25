@@ -18,8 +18,11 @@ wget -O .ssh/authorized_keys https://raw.githubusercontent.com/petcat/my.config/
 ```
 NEW
 ```
-mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "你的公钥内容" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys
-
+mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "^^^" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys
+NAT
+mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHU4I+uqyj6l254xb2LjyO/STXpf2m0lraFGf/8MPFUq" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys
+25519
+mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINQasHQourYKnMxUUfyRGzv0383LwLuq3JhYDqEce4J6" >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys
 ```
 
 ```
