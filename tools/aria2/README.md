@@ -1,3 +1,6 @@
+## 添加用户及用户组
+`adduser --system --group aria2`     
+
 ## aria2.session
 mkdir -p /etc/aria2 && touch /etc/aria2/aria2.session  
 
@@ -15,13 +18,9 @@ mkdir -p /etc/aria2 && touch /etc/aria2/aria2.session
 ## 使用命令：  
 
 开机启动：systemctl enable aria2c  
-
 运行：systemctl start aria2c    
-
 停止：systemctl stop aria2c    
-
-查看状态：systemctl status aria2c      
-
+查看状态：systemctl status aria2c    
 取消开机启动：systemctl disable aria2c    
 
 --过时，弃用--  
