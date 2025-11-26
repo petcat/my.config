@@ -1,9 +1,17 @@
 [Unit]
-Description=Aria2c
+Description=Aria2c Download Manager
 After=network.target
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/aria2c --conf-path=/etc/aria2/aria2.conf
+Restart=on-failure
+RestartSec=5
+User=aria2
+Group=aria2
+UMask=0022
+StandardOutput=null
+StandardError=null
 
 [Install]
 WantedBy=multi-user.target
