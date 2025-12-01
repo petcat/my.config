@@ -77,8 +77,8 @@ wget -O /var/snap/shadowsocks-libev/common/etc/shadowsocks-libev/config.json htt
 
 #### 1、nano /etc/sysctl.conf
 ```
-net.core.default_qdisc = fq
-net.ipv4.tcp_congestion_control = bbr
+net.core.default_qdisc = fq   
+net.ipv4.tcp_congestion_control = bbr   
 ```
 
 OVZ 的 BBR
