@@ -93,6 +93,7 @@ https://github.com/tcp-nanqinlang/wiki/wiki/lkl-rinetd
 #### 2、重置网络 `sysctl -p`
 
 #### 3、验证： `lsmod | grep bbr`
+```
 
 ## sysctl.conf
 ```
