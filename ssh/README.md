@@ -54,6 +54,8 @@ echo AuthorizedKeysFile  .ssh/authorized_keys .ssh/authorized_keys2 >> /etc/ssh/
 # Alias 2026
 
 ```
-wget -P /root https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.my_aliases
-wget -P /root https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.profile && . ~/.profile
+wget -O /root/.my_aliases https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.my_aliases
+```
+```
+wget -O /root/.profile https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.profile && . ~/.profile
 ```
