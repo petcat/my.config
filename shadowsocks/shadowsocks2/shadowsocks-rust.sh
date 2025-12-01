@@ -43,7 +43,7 @@ function install_ss() {
 {
     "server": "::",
     "server_port": 20443,
-    "password": "A9cF9aFFbB11c72c49fC10bDF0f75eeD",
+    "password": "!my_password!999",
     "method": "aes-128-gcm",
     "mode": "tcp_only"
 }
