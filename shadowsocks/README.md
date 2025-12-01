@@ -94,6 +94,7 @@ https://github.com/tcp-nanqinlang/wiki/wiki/lkl-rinetd
 
 #### 3、验证： `lsmod | grep bbr`
 
+## sysctl.conf
 ```
 fs.file-max = 1000000  
 fs.inotify.max_user_instances = 8192  
