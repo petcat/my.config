@@ -41,20 +41,20 @@ systemctl enable filebrowser.service
 $#配置变量，方便修改
 LISTEN_PORT=${LISTEN_PORT:-8080}
 LANGUAGE=${LANGUAGE:-zh-cn}
-USERNAME=${USERNAME:-admin}
-PASSWORD=${PASSWORD:-admin}
+USERNAME=${USERNAME:-aming}
+PASSWORD=${PASSWORD:-1qaz2wsx3edc}
 
 # 初始化配置数据库
 /opt/filebrowser/filebrowser -d /etc/filebrowser.db config init
 
 echo "设置监听地址和端口为: 0.0.0.0:$LISTEN_PORT"
-/opt/filebrowser/filebrowser -d /etc/filebrowser.db config set --address 0.0.0.0:$LISTEN_PORT
+/opt/filebrowser/filebrowser -d /opt/filebrowser/filebrowers.db config set --address 0.0.0.0:$LISTEN_PORT
 
 echo "设置语言为: $LANGUAGE"
-/opt/filebrowser/filebrowser -d /etc/filebrowser.db config set --locale $LANGUAGE
+/opt/filebrowser/filebrowser -d /opt/filebrowser/filebrowers.db config set --locale $LANGUAGE
 
 echo "添加用户: $USERNAME，密码: $PASSWORD，赋予管理员权限"
-/opt/filebrowser/filebrowser -d /etc/filebrowser.db users add $USERNAME $PASSWORD --perm.admin
+/opt/filebrowser/filebrowser -d /opt/filebrowser/filebrowers.db users add $USERNAME $PASSWORD --perm.admin
 
 # 启动 filebrowser 服务
 systemctl start filebrowser.service
