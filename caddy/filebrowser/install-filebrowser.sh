@@ -39,13 +39,13 @@ systemctl daemon-reload
 systemctl enable filebrowser.service
 
 $#配置变量，方便修改
-LISTEN_PORT=${LISTEN_PORT:-8080}
+LISTEN_PORT=${LISTEN_PORT:-8090}
 LANGUAGE=${LANGUAGE:-zh-cn}
 USERNAME=${USERNAME:-aming}
 PASSWORD=${PASSWORD:-1qaz2wsx3edc}
 
 # 初始化配置数据库
-/opt/filebrowser/filebrowser -d /etc/filebrowser.db config init
+/opt/filebrowser/filebrowser -d /opt/filebrowser/filebrowers.db config init
 
 echo "设置监听地址和端口为: 0.0.0.0:$LISTEN_PORT"
 /opt/filebrowser/filebrowser -d /opt/filebrowser/filebrowers.db config set --address 0.0.0.0:$LISTEN_PORT
