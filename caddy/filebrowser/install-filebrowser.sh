@@ -40,7 +40,7 @@ systemctl enable filebrowser.service
 # 配置变量，方便修改
 LISTEN_PORT=${LISTEN_PORT:-8090}
 LANGUAGE=${LANGUAGE:-zh-cn}
-USERNAME=${USERNAME:-aming}
+USERNAME=${USERNAME:-admin}
 PASSWORD=$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9' | head -c16)
 LOG_PATH=${LOG_PATH:-/var/log/filebrowser.log}
 SCOPE_DIR=${SCOPE_DIR:-/srv}
