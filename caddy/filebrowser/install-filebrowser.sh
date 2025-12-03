@@ -43,7 +43,7 @@ LISTEN_PORT=${LISTEN_PORT:-8090}
 LANGUAGE=${LANGUAGE:-zh-cn}
 USERNAME=${USERNAME:-aming}
 PASSWORD=$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9' | head -c16)
-LOG_PATH=${LOG_PATH:-/var/log/filebrowser/filebrowser.log}
+LOG_PATH=${LOG_PATH:-/var/log/filebrowser.log}
 SCOPE_DIR=${SCOPE_DIR:-/srv}
 
 # 地址合法性
