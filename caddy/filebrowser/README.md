@@ -2,10 +2,13 @@
 `curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash`   
 
 ## 设置
-新设置 
+新设置，设置端口然后新增用户名和密码
 ```
 ./filebrowser config init --address 0.0.0.0 --port 8090 --locale zh-cn --log /var/log/filebrowser.log
 ./filebrowser users add admin YOu#Pass911# --perm.admin
+# 统一 /opt/filebrowser 目录
+/opt/filebrowser/filebrowser -d /opt/filebrowser/filebrower.db config init --address 0.0.0.0 --port 8090 --locale zh-cn --log /var/log/filebrowser.log
+/opt/filebrowser/filebrowser -d /opt/filebrowser/filebrower.db users add aming K7078608Ddef3418 --perm.admin
 ```
 
 已存在filebrowser.db
