@@ -1,25 +1,37 @@
 #!/bin/bash
 set -euo pipefail
 
-# 统一路径变量
+######################################################
+# 配置变量（端口语言日志等）
+######################################################
+
+ADDRESS=${ADDRESS:-0.0.0.0}    # 可选：127.0.0.1 / 0.0.0.0 / [::]
+LISTEN_PORT=${LISTEN_PORT:-8090}
+LANGUAGE=${LANGUAGE:-zh-cn}
+LOG_PATH=${LOG_PATH:-/var/log/filebrowser.log}
+
+# 主程序路径，官方脚本默认为 /usr/local/bin/ 修改为 /opt/filebrowser/
 BIN_PATH=${BIN_PATH:-/opt/filebrowser}
+DB_FILE="$BIN_PATH/filebrowser.db"
 
-# 安装 filebrowser
-curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+######################################################
+# 官方脚本下载 filebrowser 并生成 systemd 服务
+######################################################
 
-# 放置可执行文件
-mkdir -p "$BIN_PATH"
-mv "$(which filebrowser)" "$BIN_PATH/filebrowser"
+if [[ "${1:-}" != "-pw" && "${1:-}" != "-add" && "${1:-}" != "-ls" && "${1:-}" != "-upgrade" ]]; then
+  curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
 
-# systemd 服务
-SERVICE_FILE="/etc/systemd/system/filebrowser.service"
-BACKUP_FILE="/etc/systemd/system/filebrowser.bak"
+  mkdir -p "$BIN_PATH"
+  mv "$(which filebrowser)" "$BIN_PATH/filebrowser"
 
-if [ -f "$SERVICE_FILE" ]; then
-  mv "$SERVICE_FILE" "$BACKUP_FILE"
-fi
+  SERVICE_FILE="/etc/systemd/system/filebrowser.service"
+  BACKUP_FILE="/etc/systemd/system/filebrowser.bak"
 
-cat <<EOF > "$SERVICE_FILE"
+  if [ -f "$SERVICE_FILE" ]; then
+    mv "$SERVICE_FILE" "$BACKUP_FILE"
+  fi
+
+  cat <<EOF > "$SERVICE_FILE"
 [Unit]
 Description=File Browser
 After=network.target
@@ -27,57 +39,41 @@ After=network.target
 [Service]
 User=root
 Group=root
-ExecStart=$BIN_PATH/filebrowser -d $BIN_PATH/filebrowser.db
+ExecStart=$BIN_PATH/filebrowser -d $DB_FILE
 Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
-systemctl daemon-reload
-systemctl enable filebrowser.service
+  systemctl daemon-reload
+  systemctl enable filebrowser.service
 
-# 配置变量
-ADDRESS=${ADDRESS:-0.0.0.0}    # 127.0.0.1 / 0.0.0.0 / [::]
-LISTEN_PORT=${LISTEN_PORT:-8090}
-LANGUAGE=${LANGUAGE:-zh-cn}
-USERNAME=${USERNAME:-aming}
-PASSWORD=$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9' | head -c16)
-LOG_PATH=${LOG_PATH:-/var/log/filebrowser.log}
-SCOPE_DIR=${SCOPE_DIR:-/srv}
+  ######################################################
+  # 初始化配置与添加用户
+  ######################################################
 
-# 地址合法性
-case "$ADDRESS" in
-  "127.0.0.1"|"0.0.0.0"|"[::]") ;;
-  *) echo "ADDRESS 只能为 127.0.0.1 / 0.0.0.0 / [::]"; exit 1 ;;
-esac
+  mkdir -p "$(dirname "$LOG_PATH")"
+  touch "$LOG_PATH"
 
-# 预创建 scope 目录与日志文件
-mkdir -p "$SCOPE_DIR"
-mkdir -p "$(dirname "$LOG_PATH")"
-touch "$LOG_PATH"
+  "$BIN_PATH/filebrowser" -d "$DB_FILE" config init \
+    --address "$ADDRESS" \
+    --port "$LISTEN_PORT" \
+    --locale "$LANGUAGE" \
+    --log "$LOG_PATH"
 
-# 初始化配置数据库
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config init
+  # 交互式输入用户名和密码
+  read -p "请输入用户名 (默认: admin): " INPUT_USER
+  read -p "请输入密码 (默认: 随机16位): " INPUT_PASS
 
-# 正确设置项：地址、端口、语言、日志、默认目录
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config set --address "$ADDRESS"
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config set --port "$LISTEN_PORT"
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config set --locale "$LANGUAGE"
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config set --log "$LOG_PATH"
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config set --scope "$SCOPE_DIR"
+  USERNAME=${INPUT_USER:-admin}
+  PASSWORD=${INPUT_PASS:-$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9' | head -c16)}
 
-# 可选：自动创建用户目录（按需启用）
-# "$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" config set --createUserDir
+  "$BIN_PATH/filebrowser" -d "$DB_FILE" users add "$USERNAME" "$PASSWORD" --perm.admin
 
-# 添加管理员用户
-"$BIN_PATH/filebrowser" -d "$BIN_PATH/filebrowser.db" users add "$USERNAME" "$PASSWORD" --perm.admin
+  systemctl start filebrowser.service
 
-# 启动服务
-systemctl start filebrowser.service
-
-# 一次性输出所有配置信息
-cat <<INFO
+  cat <<INFO
 ==============================
 Filebrowser 已安装并启动成功
 ------------------------------
@@ -86,8 +82,73 @@ Filebrowser 已安装并启动成功
 用户名: $USERNAME
 密码: $PASSWORD
 日志路径: $LOG_PATH
-默认目录: $SCOPE_DIR
-数据库文件: $BIN_PATH/filebrowser.db
+数据库文件: $DB_FILE
 安装目录: $BIN_PATH
 ==============================
 INFO
+fi
+
+######################################################
+# 额外功能：修改密码 / 添加用户 / 列出用户 / 升级
+######################################################
+
+if [[ "${1:-}" == "-pw" ]]; then
+  systemctl stop filebrowser.service
+  read -p "请输入新密码 (默认: 随机16位): " INPUT_PASS
+  NEW_PASS=${INPUT_PASS:-$(openssl rand -base64 16 | tr -dc 'a-zA-Z0-9' | head -c16)}
+  "$BIN_PATH/filebrowser" -d "$DB_FILE" users update 1 -p "$NEW_PASS"
+  systemctl start filebrowser.service
+  echo "=============================="
+  echo "用户 ID=1 密码已更新"
+  echo "新密码: $NEW_PASS"
+  echo "=============================="
+  exit 0
+fi
+
+if [[ "${1:-}" == "-add" ]]; then
+  if [[ -z "${2:-}" || -z "${3:-}" ]]; then
+    echo "用法: $0 -add <用户名> <密码>"
+    exit 1
+  fi
+  NEW_USER="$2"
+  NEW_PASS="$3"
+  "$BIN_PATH/filebrowser" -d "$DB_FILE" users add "$NEW_USER" "$NEW_PASS"
+  echo "=============================="
+  echo "已添加普通用户"
+  echo "用户名: $NEW_USER"
+  echo "密码: $NEW_PASS"
+  echo "=============================="
+  exit 0
+fi
+
+if [[ "${1:-}" == "-ls" ]]; then
+  echo "=============================="
+  echo "当前用户列表:"
+  "$BIN_PATH/filebrowser" -d "$DB_FILE" users ls
+  echo "=============================="
+  exit 0
+fi
+
+if [[ "${1:-}" == "-upgrade" ]]; then
+  echo "检查当前版本..."
+  CURRENT_VER=$("$BIN_PATH/filebrowser" version | awk '{print $NF}')
+  echo "当前版本: $CURRENT_VER"
+
+  echo "获取最新版本..."
+  LATEST_VER=$(curl -s https://api.github.com/repos/filebrowser/filebrowser/releases/latest | grep tag_name | cut -d '"' -f4)
+  echo "最新版本: $LATEST_VER"
+
+  if [[ "$CURRENT_VER" == "$LATEST_VER" ]]; then
+    echo "=============================="
+    echo "Filebrowser 已是最新版本 ($CURRENT_VER)"
+    echo "无需升级"
+    echo "=============================="
+  else
+    echo "发现新版本，开始升级..."
+    curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
+    mv "$(which filebrowser)" "$BIN_PATH/filebrowser"
+    echo "升级完成，新版本:"
+    "$BIN_PATH/filebrowser" version
+  fi
+  exit 0
+fi
