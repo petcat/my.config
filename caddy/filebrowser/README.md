@@ -11,8 +11,9 @@
 /opt/filebrowser/filebrowser -d /opt/filebrowser/filebrower.db users add aming K7078608Ddef3418 --perm.admin
 ```
 
-已存在filebrowser.db
+已存在filebrowser.db 需要修改调整，先停止然后再设置
 ```
+systemctl stop filebrowser
 ./filebrowser config set --address 0.0.0.0 --port 8090 --locale zh-cn --log /var/log/filebrowser.log
 ./filebrowser users update admin -p YOu#Pass911#
 ```
