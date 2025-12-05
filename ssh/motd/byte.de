@@ -1,0 +1,24 @@
+   _____ __              __                              __       
+  / ___// /_  ____ _____/ /___ _      ___________  _____/ /_______
+  \__ \/ __ \/ __ `/ __  / __ \ | /| / / ___/ __ \/ ___/ //_/ ___/
+ ___/ / / / / /_/ / /_/ / /_/ / |/ |/ (__  ) /_/ / /__/ ,< (__  ) 
+/____/_/ /_/\__,_/\__,_/\____/|__/|__/____/\____/\___/_/|_/____/  
+_______________________________________________________________
+
+                Welcome to Alpine! [/etc/motd][setup-alpine]
+                ++++++++++++++++++++++++++++++++++++++++++++                                                                  
+        IP: [2a13:7e80:0:38:405b::]
+        apk add frp 
+nano /ets/shadowsocks-rust.json
+rc-service shadowsocks start
+rc-service shadowsocks status
+rc-service shadowsocks restart
+升级：
+nano /etc/apk/repositories
+apk upgrade shadowsocks-rust --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main
+apk upgrade frp --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+15802, 15803, 44433
+
+Frps: 15808 (面板15809)
+Nginx: /var/www/html natde1.bytevirt.net:15810
+_________________________________________________________________
