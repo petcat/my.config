@@ -1,0 +1,29 @@
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        /etc/update-motd.d/90-vps-info
+        run-parts /etc/update-motd.d/
+        ln -s /etc/motd /root/README
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ * Node:        德國100G
+ * Info:        1C + 512M + 100G
+ * System:      Debian GNU/Linux 12  x64
+-------------------------------------------------------------------
+ * Installed:   Shadowsocks-rust, Gotify, Frps, Aria2c, Nginx-full
+ * IPv4:        natde3.bytevirt.net 
+ * Port:        31301 | 31302 ~ 31320
+ * IPv6:        [2a01:4f8:271:2d44:1b8::]
+ * Domain:      x.com
+ * Webdir:      /srv  /opt
+ * Uptime:      2020-- [Reg 09-10]
+---------------------------【site】--------------------------------
+ shadowsocks 31302, 31303, 44433
+ /opt/gotify:31311
+ /opt/frps: 31309 | 面板31308   
+ /home/aria2c:31310
+ /var/www/html:31320
+ /srv:31313
+_________________________________________________________________  
+sysstatus shadowsocks
+resys shadowsocks
+sysstatus gotify
+===================================================================
