@@ -21,7 +21,7 @@ sudo apt -t bookworm-backports install podman cockpit-podman
 ```
 
 ### 文件管理
-···
+```
 wget https://github.com/45Drives/cockpit-navigator/releases/download/v0.5.10/cockpit-navigator_0.5.10-1focal_all.deb
 apt install ./cockpit-navigator_0.5.10-1focal_all.deb
 ```
