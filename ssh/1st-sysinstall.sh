@@ -1,14 +1,22 @@
 #!/bin/bash
 
+#############################################
+#   VPS 初始化脚本（混合模式：非关键步骤容错）
+#############################################
+
+set -e  # 关键步骤失败立即退出
+ERRORS=()  # 用于记录非关键步骤错误
+
 # --- 可配置变量 ---
 KEY="ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHU4I+uqyj6l254xb2LjyO/STXpf2m0lraFGf/8MPFUq"
 APP="screen apt-transport-https ca-certificates zstd mc curl zip unzip nano"
 ALIASES_URL="https://raw.githubusercontent.com/petcat/my.config/refs/heads/master/ssh/.my_aliases"
 
-set -e
-echo "开始VPS初始化..."
+echo "开始 VPS 初始化..."
 
-# 检测系统类型
+#############################################
+# 0. 检测系统类型
+#############################################
 if [ -f /etc/debian_version ]; then
     OS="debian"
 elif [ -f /etc/lsb-release ]; then
@@ -18,22 +26,28 @@ else
 fi
 echo "检测到系统: $OS"
 
-# 1. 系统更新
+#############################################
+# 1. 系统更新（关键步骤）
+#############################################
+echo "更新系统..."
 apt update && apt upgrade -y
 
-# 2. 安装软件
-if [ -n "$APP" ]; then
-    apt install -y $APP
-fi
+#############################################
+# 2. 安装软件（关键步骤）
+#############################################
+echo "安装软件: $APP"
+apt install -y $APP
 
-# 确保 wget 或 curl 存在
+# 确保 wget/curl 存在
 if ! command -v wget >/dev/null 2>&1 && ! command -v curl >/dev/null 2>&1; then
     apt install -y wget curl
 fi
 
-# 3. SSH 密钥认证
+#############################################
+# 3. SSH 密钥配置（关键步骤）
+#############################################
 if [ -n "$KEY" ]; then
-    echo "配置SSH密钥认证..."
+    echo "配置 SSH 密钥认证..."
 
     SSH_DIR="/root/.ssh"
     mkdir -p "$SSH_DIR"
@@ -49,19 +63,21 @@ if [ -n "$KEY" ]; then
     sed -i 's/^#*PermitRootLogin.*/PermitRootLogin yes/' "$SSH_CONFIG_FILE"
     sed -i 's/^#*PasswordAuthentication.*/PasswordAuthentication no/' "$SSH_CONFIG_FILE"
 
-    # Ubuntu 服务名为 ssh，Debian 为 sshd
+    # 自动检测 SSH 服务名
     if systemctl list-unit-files | grep -q ssh.service; then
         systemctl restart ssh
     else
         systemctl restart sshd
     fi
 
-    echo "SSH配置已更新。"
 else
-    echo "警告: 未设置SSH公钥，跳过密钥配置。"
+    echo "警告: 未设置 SSH 公钥，跳过密钥配置。"
 fi
 
-# 4. 设置 .profile
+#############################################
+# 4. 设置 .profile（非关键步骤）
+#############################################
+echo "设置 .profile..."
 cat > /root/.profile << 'EOF'
 export PATH="$HOME/bin:$PATH"
 export HISTSIZE=5000
@@ -79,59 +95,68 @@ PS1="\033[33m[\t]\033[32m\u@\h:\033[34m\w\033[0m#"
 [ -f ~/.my_aliases ] && . ~/.my_aliases
 EOF
 
-# 5. 下载 .my_aliases
+#############################################
+# 5. 下载 .my_aliases（关键步骤）
+#############################################
 if [ -n "$ALIASES_URL" ]; then
     echo "下载 .my_aliases..."
     if command -v wget >/dev/null 2>&1; then
-        wget -O /root/.my_aliases "$ALIASES_URL"
+        wget -O /root/.my_aliases "$ALIASES_URL" || exit 1
     else
-        curl -o /root/.my_aliases "$ALIASES_URL"
+        curl -o /root/.my_aliases "$ALIASES_URL" || exit 1
     fi
     chmod 644 /root/.my_aliases
 fi
 
-# 6. 启用 BBR
-echo "启用BBR..."
-
+#############################################
+# 6. 启用 BBR（非关键步骤）
+#############################################
+echo "启用 BBR..."
 kernel_version=$(uname -r | cut -d'-' -f1)
 if dpkg --compare-versions "$kernel_version" ge "4.9"; then
-    grep -q "net.core.default_qdisc=fq" /etc/sysctl.conf || echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
-    grep -q "net.ipv4.tcp_congestion_control=bbr" /etc/sysctl.conf || echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-    sysctl -p
+    {
+        grep -q "net.core.default_qdisc=fq" /etc/sysctl.conf || echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+        grep -q "net.ipv4.tcp_congestion_control=bbr" /etc/sysctl.conf || echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+        sysctl -p
+    } || ERRORS+=("BBR 配置失败")
 else
-    echo "内核版本过低，不支持BBR。"
+    ERRORS+=("内核版本过低，不支持 BBR")
 fi
 
-# 7. 日志限制
-echo "配置日志限制..."
+#############################################
+# 7. 日志系统优化（非关键步骤）
+#############################################
 
-JOURNALD_CONF="/etc/systemd/journald.conf"
-if [ -f "$JOURNALD_CONF" ]; then
+# journald
+echo "配置 journald..."
+{
+    JOURNALD_CONF="/etc/systemd/journald.conf"
     cp "$JOURNALD_CONF" "${JOURNALD_CONF}.bak"
 
     sed -i 's/^#*SystemMaxUse=.*/SystemMaxUse=32M/' "$JOURNALD_CONF"
     sed -i 's/^#*SystemKeepFree=.*/SystemKeepFree=64M/' "$JOURNALD_CONF"
     sed -i 's/^#*SystemMaxFileSize=.*/SystemMaxFileSize=4M/' "$JOURNALD_CONF"
 
-    # Debian 11 不支持 SystemMaxFiles
     if grep -q "SystemMaxFiles" "$JOURNALD_CONF"; then
         sed -i 's/^#*SystemMaxFiles=.*/SystemMaxFiles=5/' "$JOURNALD_CONF"
     fi
 
     systemctl restart systemd-journald
-fi
+} || ERRORS+=("journald 配置失败")
 
 # rsyslog
-if command -v rsyslogd >/dev/null 2>&1; then
-    RSYSLOG_CONF="/etc/rsyslog.conf"
-    cp "$RSYSLOG_CONF" "${RSYSLOG_CONF}.bak"
-    systemctl restart rsyslog
-fi
+echo "配置 rsyslog..."
+{
+    if command -v rsyslogd >/dev/null 2>&1; then
+        cp /etc/rsyslog.conf /etc/rsyslog.conf.bak
+        systemctl restart rsyslog
+    fi
+} || ERRORS+=("rsyslog 配置失败")
 
-# logrotate（安全模式）
-LOGROTATE_VPS_FILE="/etc/logrotate.d/vps_optimization"
-cat > "$LOGROTATE_VPS_FILE" << 'EOF'
-# VPS优化: 限制常用日志文件大小
+# logrotate
+echo "配置 logrotate..."
+{
+    cat > /etc/logrotate.d/vps_optimization << 'EOF'
 /var/log/syslog
 /var/log/auth.log
 /var/log/kern.log
@@ -146,21 +171,40 @@ cat > "$LOGROTATE_VPS_FILE" << 'EOF'
     copytruncate
 }
 EOF
+    logrotate -f /etc/logrotate.conf
+} || ERRORS+=("logrotate 执行失败")
 
-logrotate -f /etc/logrotate.conf || true
-
-# 8. 替换 motd
+#############################################
+# 8. motd 替换（非关键步骤）
+#############################################
 SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
 if [ -f "$SCRIPT_DIR/motd" ]; then
-    cp "$SCRIPT_DIR/motd" /etc/motd
+    cp "$SCRIPT_DIR/motd" /etc/motd || ERRORS+=("motd 替换失败")
 fi
 
-# 9. 执行同目录下其他脚本
+#############################################
+# 9. 执行同目录脚本（非关键步骤）
+#############################################
 echo "执行其他脚本..."
 for script in "$SCRIPT_DIR"/*.sh; do
     [ "$script" = "$0" ] && continue
     chmod +x "$script"
-    ( "$script" ) || echo "脚本 $script 执行失败，已跳过。"
+    ( "$script" ) || ERRORS+=("脚本 $script 执行失败")
 done
 
-echo "VPS初始化完成！"
+#############################################
+# 10. 最终报告
+#############################################
+echo ""
+echo "=============================="
+echo "  VPS 初始化完成"
+echo "=============================="
+
+if [ ${#ERRORS[@]} -gt 0 ]; then
+    echo "以下非关键步骤执行失败："
+    printf ' - %s\n' "${ERRORS[@]}"
+else
+    echo "所有步骤均成功执行。"
+fi
+
+echo "初始化结束。"
