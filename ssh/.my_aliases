@@ -115,10 +115,14 @@ elif grep -qi debian /etc/os-release || grep -qi ubuntu /etc/os-release; then
 
     # systemctl
     alias resys='systemctl restart'
+    alias isys='systemctl status'
     alias sysre='systemctl restart'
     alias systart='systemctl start'
     alias systop='systemctl stop'
     alias systatus='systemctl status'
+    alias sysen='systemctl enable'
+    alias sysdi='systemctl disable'
+    alias syssys='systemctl daemon-reload'
 
     # Web Server
     ## Nginx
