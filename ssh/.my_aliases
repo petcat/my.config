@@ -122,7 +122,7 @@ elif grep -qi debian /etc/os-release || grep -qi ubuntu /etc/os-release; then
     alias systatus='systemctl status'
     alias sysen='systemctl enable'
     alias sysdi='systemctl disable'
-    alias unsys='systemctl disable'
+    alias sysdel='systemctl disable'
     alias syssys='systemctl daemon-reload'
 
     # Web Server
